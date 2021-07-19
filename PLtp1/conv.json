@@ -1,0 +1,1327 @@
+{
+	"inproceedings" : [
+		{
+			"label" : "graminteractivas1990",
+			"author" : "F. Mário Martins and J.J. Almeida and P.R. Henriques",
+			"title" : "Mecanismos para Especificação e Prototipagem de Interfaces\n Utilizador-Sistema",
+			"note" : "(Gramáticas Interactivas guardadas)",
+			"booktitle" : "3$º$ Encontro Português de Computação Gráfica",
+			"address" : "Coimbra"
+		},{
+			"label" : "Almeida94b",
+			"author" : "J.J. Almeida",
+			"title" : "{GPC} -- a Tool for higher-order grammar specification",
+			"booktitle" : "Actas del X Congreso de Lenguajes Naturales e Leanguajes Formales, Sevilla",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/yalg3.ps.gz",
+			"editor" : "Carlos Martin Vide",
+			"keyword" : "DCG,grammar"
+		},{
+			"label" : "Almeida95a",
+			"author" : "J.J. Almeida",
+			"title" : "{YaLG} -- extending {DCG} for natural language processing",
+			"booktitle" : "Actas del XI Congreso de Lenguajes Naturales e Leanguajes Formales, Tortosa",
+			"pages" : "621--628",
+			"editor" : "Carlos Martin Vide",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/yalg.ps.gz",
+			"keyword" : "jspell,morphology,PLN,DCG,nllex"
+		},{
+			"label" : "Almeida94c",
+			"author" : "J.J. Almeida and Ulisses Pinto",
+			"title" : "Jspell -- um módulo para análise léxica genérica de linguagem natural",
+			"booktitle" : "Actas do X Encontro da Associação Portuguesa de Linguística",
+			"address" : "Évora 1994",
+			"pages" : "1--15",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/jspell1.ps.gz",
+			"keyword" : "jspell,morphology,PLN,perl"
+		},{
+			"label" : "Ramalho95",
+			"author" : "J.C. Ramalho and J.J. Almeida and P.R. Henriques",
+			"title" : "Algebraic Specification of Documents",
+			"booktitle" : "TWLT10 - Algebraic Methods in Language Processing",
+			"month" : "6--8 Dec.",
+			"editor" : "A. Nijholt and G. Scollo and R. Steetskamp",
+			"address" : "Twente University, Netherlands",
+			"note" : "AMiLP'95",
+			"series" : "Twente Workshop on Language Technology",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/amilp95.ps.gz",
+			"docpage" : "http://www.di.uminho.pt/~jcr/projectos/david/ARTIGOS/AMiLP95/amilp95.html",
+			"pages" : "55--64",
+			"keyword" : "PDavid, Camila, SGML"
+		},{
+			"label" : "Almeida96a",
+			"author" : "J.J. Almeida",
+			"title" : "Especificação e tratamento de Dicionários",
+			"booktitle" : "Actas do XI Encontro da Associação Portuguesa de Linguística",
+			"address" : "Lisboa 1995",
+			"volume" : 2,
+			"url" : "http://natura.di.uminho.pt/~jj/pln/etdic.ps.gz",
+			"keyword" : "perl,morphology,lexical analysis, dictionary"
+		},{
+			"label" : "Ulisses96",
+			"author" : "Ulisses Pinto and J.J. Almeida",
+			"title" : "Tratamento automático de termos compostos",
+			"booktitle" : "Actas do XI Encontro da Associação Portuguesa de Linguística",
+			"address" : "Lisboa 1995",
+			"volume" : 2,
+			"url" : "http://natura.di.uminho.pt/~jj/pln/ptc.ps.gz",
+			"keyword" : "jspell,morphology,lexical analysis, PLN"
+		},{
+			"label" : "Almeida96b",
+			"author" : "J.J. Almeida and J.B. Barros",
+			"title" : "{YaLG} a tool for higher-order grammar specification",
+			"booktitle" : " II International Conference on Mathematical Linguistics, Tarragona, Spain",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/yalg2.ps.gz",
+			"keyword" : "yalg,DCG,RS"
+		},{
+			"label" : "Ramalho96",
+			"author" : "J.C. Ramalho and J.J. Almeida and P.R. Henriques",
+			"title" : "Document Semantics: two approaches",
+			"booktitle" : "Celebrating a Decade of SGML",
+			"month" : "Nov.",
+			"address" : "Boston, USA",
+			"note" : "SGML'96 Conference",
+			"editor" : "Graphic Communications Association",
+			"publisher" : "ArborText",
+			"pages" : "473--483",
+			"docpage" : "http://www.di.uminho.pt/~jcr/projectos/david/COMS/sgml96/sgml96.html",
+			"keyword" : "PDavid, Camila, SGML,AG,FS"
+		},{
+			"label" : "SGML97",
+			"author" : "J.C. Ramalho and J.G. Rocha and J.J. Almeida and P.R. Henriques",
+			"title" : "SGML Documents: where does quality go?",
+			"booktitle" : "SGML/XML'97 Conference",
+			"address" : "Washington D.C. - USA",
+			"month" : "Dec.",
+			"keyword" : "PDavid, SGML, Semantics"
+		},{
+			"label" : "Almeida98",
+			"author" : "J.J. Almeida",
+			"title" : "Programação de dicionários",
+			"booktitle" : "Actas do XIII Encontro da Associação Portuguesa de Linguística",
+			"pages" : "21--28",
+			"volume" : 1,
+			"address" : "Lisboa 1997",
+			"keyword" : "perl,morphology,dictionary,parser",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/progDic.ps.gz"
+		},{
+			"label" : "Reis98",
+			"author" : "Ricardo Reis and J.J. Almeida",
+			"title" : "Etiquetador morfo-sintáctico para o Português",
+			"booktitle" : "Actas do XIII Encontro da Associação Portuguesa de Linguística",
+			"address" : "Lisboa 1997",
+			"keyword" : "tagger, PLN",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/etiquetador2.ps.gz"
+		},{
+			"label" : "ABNO97a",
+			"title" : "Camila: Formal Software Engineering Supported by Functional Programming",
+			"author" : "J.J. Almeida and Barbosa, L.S. and Neves, F.L. and Oliveira, J.N.",
+			"booktitle" : "Proc. II Conf. Latino Americana de Programación Funcional ({CLaPF97})",
+			"editor" : "De Giusti, A. and Diaz, J. and Pesado, P.",
+			"month" : "October",
+			"address" : "La Plata, Argentina",
+			"pages" : "1343--1358",
+			"keyword" : "Camila, formal specification",
+			"url" : "http://camila.di.uminho.pt/camila-doc/CLaPF97.ps.gz"
+		},{
+			"label" : "ABNO97b",
+			"title" : "Camila: Prototyping and Refinement of Constructive Specifications",
+			"author" : "J.J. Almeida and Barbosa, L.S. and Neves, F.L. and Oliveira, J.N.",
+			"booktitle" : "6th International Conference on Algebraic Methods and Software Technology ({AMAST'97})",
+			"editor" : "Johnson, M.",
+			"month" : "December",
+			"address" : "Sydney, Australia",
+			"publisher" : "Springer Lect. Notes Comp. Sci. (1349)",
+			"pages" : "554--559",
+			"keyword" : "Camila, formal specification"
+		},{
+			"label" : "AH97",
+			"title" : "Dynamic Dictionary = cooperative information sources",
+			"author" : "J.J. Almeida and P.R. Henriques",
+			"address" : "Australia",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/agentes97.ps.gz",
+			"keyword" : "dictionary, Agentes",
+			"booktitle" : "Proc. II Conference on Knowledge-based Intelligent Electronic Systems ({Kes98})",
+			"month" : "April"
+		},{
+			"label" : "museums98",
+			"author" : "J.G. Rocha and M.R. Henriques and J.C. Ramalho and J.J. Almeida\n and J.L. Faria and P.R. Henriques",
+			"title" : "Adapting Museum Structures for the Web: No Changes Needed!",
+			"booktitle" : "Museums and the Web 1998",
+			"note" : "Toronto - Canadá"
+		},{
+			"label" : "ABBN98",
+			"author" : "Almeida, J.J. and Barbosa, L.S. and Barros, J.B. and\n Neves, L.F.",
+			"title" : "On The Development of Camila",
+			"booktitle" : "Workshop on Research Themes on Functional Programming",
+			"month" : "18 Sep.",
+			"editor" : "L.S. Barbosa and J.A. Saraiva"
+		},{
+			"label" : "Gis99",
+			"author" : "Jorge Rocha and Ana Silva and Ricardo Henriques and J.J. Almeida and Pedro Henriques",
+			"booktitle" : "Conferência da Association of Geographic Information\nLaboratories for Europe (AGILE)",
+			"address" : "Roma",
+			"keyword" : "GIS"
+		},{
+			"label" : "RPA99",
+			"author" : "Jorge Rocha and Tiago Pedroso and J.J. Almeida",
+			"booktitle" : "Conferência da Association of Geographic Information\nLaboratories for Europe (AGILE)",
+			"address" : "Roma",
+			"keyword" : "GIS, XML, mapit"
+		},{
+			"label" : "RSea99",
+			"author" : "Jorge Gustavo Rocha and Ana Silva and J.J. Almeida and Mario Ricardo Henriques and Pedro Rangel Henriques",
+			"booktitle" : "GISBRASIL'99, Salvador",
+			"keyword" : "GIS"
+		},{
+			"label" : "xmldt99",
+			"author" : " J.J. Almeida and José Carlos Ramalho",
+			"booktitle" : "XML-Europe'99, Granada - Espanha",
+			"month" : "May",
+			"keyword" : "XML, perl"
+		},{
+			"label" : "Barbosa2000",
+			"author" : "L.S. Barbosa and J.B. Barros and J.J. Almeida",
+			"title" : "Polytypic Recursion Patterns",
+			"month" : "May",
+			"booktitle" : "{SBLP'2000} (to appear as a ENTCS volume)",
+			"address" : "{UFP}, Recife, Brasil",
+			"keyword" : "FS, Camila"
+		},{
+			"label" : "jj2001x",
+			"author" : "J.J. Almeida",
+			"title" : "Smallbook -- comando para produção de livros em pequena escala",
+			"pages" : "445--450",
+			"booktitle" : "Actas da II Conferência Internacional de Tecnologias de\nInformação e Comunicação na Educação",
+			"address" : "Braga",
+			"keyword" : "publishing, latex, smallbook"
+		},{
+			"label" : "mp2001",
+			"author" : "J.J. Almeida and J. Gustavo Rocha and P. Rangel Henriques and\n Sónia Moreira and Alberto Simões",
+			"booktitle" : "Congresso Nacional de Bibliotecários, Arquivistas e\n Documentalistas",
+			"address" : "Porto",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/museuDaPessoa2001.ps.gz",
+			"month" : "Maio"
+		},{
+			"label" : "alfarrabio2001",
+			"author" : "J.J. Almeida and P. Rangel Henriques and J. Gustavo Rocha and\n Alberto Simões",
+			"booktitle" : "Congresso Nacional de Bibliotecários, Arquivistas e\n Documentalistas",
+			"address" : "Porto",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/alfarrabio2001.ps.gz",
+			"month" : "Maio"
+		},{
+			"label" : "freq2002",
+			"author" : "Paulo A. Rocha and Alberto M. Simões and J.J. Almeida",
+			"title" : " Cálculo de frequências de\npalavras para entradas de dicionários através do uso conjunto de analisadores\nmorfológicos, taggers e corpora",
+			"booktitle" : "Actas do XVII Encontro da Associação Portuguesa de Linguística",
+			"address" : "Lisboa 2001",
+			"pages" : "407--418",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/apl:freqnormpt.ps.gz",
+			"abstract" : "Apresentamos neste documento uma possível abordagem à\n extracção de frequências de palavras a partir de\n corpora, baseada numa utilização cooperativa de várias\n ferramentas de Processamento de Linguagem Natural."
+		},{
+			"label" : "jspell2002",
+			"author" : "Alberto M. Simões and J.J. Almeida",
+			"title" : " Jspell.pm -- um módulo de análise morfológica\npara uso em processamento de linguagem natural",
+			"booktitle" : "Actas do XVII Encontro da Associação Portuguesa de Linguística",
+			"address" : "Lisboa 2001",
+			"pages" : "485--495",
+			"abstract" : "Neste documento é nosso propósito apresentar as\n características presentes no analisador morfológico\n jspell e quais as suas consequências ao nível de\n aplicações de processamento de linguagem natural. Como\n ferramenta que é frequentemente integrada em software\n mais específico, apresentamos um módulo Perl\n desenvolvido com o objectivo de facilitar a interligação\n do analisador morfológico com pequenas aplicações\n desenvolvidas em linguagens de scripting. Devido à\n constante necessidade de melhoramento de dicionários, e\n em particular dos analisadores morfológicos, discutimos\n as propriedades que estes devem conter para facilitar o\n seu processamento e enriquecimento automático."
+		},{
+			"label" : "dag2002",
+			"author" : "Alberto M. Simões and J.J. Almeida and Pedro R. Henriques",
+			"title" : "Directory Attribute Grammars",
+			"booktitle" : "VI Simpósio Brasileiro de Linguagens de Programação",
+			"pages" : "297--308",
+			"address" : "Rio de Janeiro, Brasil"
+		},{
+			"label" : "elpub2002",
+			"author" : "Alberto M. Simões and J.J. Almeida",
+			"title" : "Library::* -- a toolkit for digital libraries",
+			"booktitle" : "Elpub 2002 -- International Conference on Electronic Publishing",
+			"address" : "Karlov Vary, República Checa",
+			"month" : "Nov.",
+			"pages" : "203--211",
+			"isbn" : "3-89700-357-0"
+		},{
+			"label" : "elpub2003",
+			"author" : "Alberto Manuel Simões and J.J. Almeida",
+			"title" : "Music publishing",
+			"isbn" : "972-98921-2-1",
+			"note" : "Guimarães, Jun. 2003",
+			"publisher" : "Universidade do Minho",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/elpub2003.pdf",
+			"editor" : "Sely Costa et al.",
+			"booktitle" : "ElPub 2003 -- International conference on electronic publishing",
+			"month" : "June",
+			"pages" : "288--298",
+			"lang" : "EN",
+			"abstract" : "\n Current music publishing in the Internet is mainly concerned with\n sound publishing. We claim that music publishing is not only to make\n sound available but also to define relations between a set of music\n objects like music scores, guitar chords, lyrics and their\n meta-data. We want an easy way to publish music in the Internet, to\n make high quality paper booklets and even to create Audio CD's.\n In this document we present a workbench for music publishing based\n on open formats, using open-source tools and script programming over\n them. The workbench is based on an archive specification written in\n a text-based format which includes sound references, music scores,\n chords and lyrics and their meta-information.\n ",
+			"keyword" : "música, bibliotecas digitais"
+		},{
+			"label" : "linguateca",
+			"author" : "Diana Santos and Alberto Simões and Ana Frankenberg-Garcia and\n Ana Pinto and Anabela Barreiro and Belinda Maia and Cristina Mota and Débora\n Oliveira and Eckhard Bick and Elisabete Ranchhod and J.J. Almeida\n and Luís Cabral and Luís Costa and Luís Sarmento and Marcirio Chaves and Nuno\n Cardoso and Paulo Rocha and Rachel Aires and Rosário Silva and Rui Vilela and\n Susana Afonso",
+			"title" : "Linguateca: um centro de recursos distribuído para o processamento\n computacional da língua portuguesa",
+			"booktitle" : "Workshop on Linguistic Tools and Resources for Spanish and\n Portuguese",
+			"editor" : "IBERAMIA 2004",
+			"lang" : "EN",
+			"pages" : "147--154",
+			"address" : "Puebla, México",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/linguateca.pdf"
+		},{
+			"label" : "XML",
+			"author" : "Rui Vilela and Alberto Simões and Eckhard Bick and J.J. Almeida",
+			"title" : "Representação em {XML} da {F}loresta {S}intáctica",
+			"month" : "Fev.",
+			"editor" : "José Carlos Ramalho and Alberto Simões and João Correia Lopes",
+			"booktitle" : "XATA 2005, Aplicações e Tecnologias Associadas",
+			"publisher" : "Departamento de Informática, Universidade do Minho",
+			"location" : "Braga",
+			"keyword" : "XML, Floresta Sintáctica, tigerXML, Lingua::PT::Dirty"
+		},{
+			"label" : "XML",
+			"author" : "J.J. Almeida and Alberto Simões",
+			"title" : "Inferência de tipos em documentos {XML}",
+			"month" : "Fev.",
+			"editor" : "José Carlos Ramalho and Alberto Simões and João Correia Lopes",
+			"booktitle" : "XATA 2005, Aplicações e Tecnologias Associadas",
+			"publisher" : "Departamento de Informática, Universidade do Minho",
+			"location" : "Braga",
+			"keyword" : "XML, XML::DT"
+		},{
+			"label" : "XML",
+			"author" : "J.J. Almeida and Alberto Simões",
+			"title" : "Navegante: um proxy de ordem superior para navegação intusiva",
+			"month" : "Fev.",
+			"editor" : "José Carlos Ramalho and Alberto Simões and João Correia Lopes",
+			"booktitle" : "XATA 2006, Aplicações e Tecnologias Associadas",
+			"publisher" : "ESTGP",
+			"address" : "Portalegre",
+			"Note" : "poster",
+			"pages" : "376--377",
+			"keyword" : "XML, XML::DT, HTML"
+		},{
+			"label" : "XML",
+			"author" : "J.J. Almeida and Alberto Simões",
+			"month" : "Fev.",
+			"editor" : "José Carlos Ramalho and Alberto Simões and João Correia Lopes",
+			"publisher" : "ESTGP",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/xata2006-xmlwritersimple.pdf",
+			"address" : "Portalegre",
+			"pages" : "307--314",
+			"keyword" : "XML, XML::DT, HTML",
+			"isbn" : "972-99166-2-4",
+			"lang" : "PT",
+			"abstract" : "\n É consensual que o XML como linguagem para a estruturação de documentos\n tem vindo a tomar um lugar relevante. É também evidente a vantagem\n obtida no uso de XML como linguagem de intercâmbio.\n No entanto, a sua sintaxe é\n demasiado descritiva pelo que a geração de documentos de forma\n manual é dolorosa sendo útil dispor de módulos\n que simplifiquem essa tarefa.\n\n Neste artigo propomos um módulo Perl (XML::Writer::Simple) configurável via\n DTD que simplifica a tarefa de gerar XML.\n "
+		},{
+			"label" : "eamt06",
+			"author" : "Alberto Simões and J. João Almeida",
+			"title" : "Combinatory Examples Extraction for Machine Translation",
+			"year" : 2006,
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/eamt06.pdf",
+			"booktitle" : "11th Annual Conference of the European Association for Machine Translation",
+			"editor" : "Jan Tore Lonning and Stephan Oepen",
+			"address" : "Oslo, Norway",
+			"pages" : "27--32",
+			"month" : "19--20, June",
+			"isbn" : "82-7368-294-3",
+			"lang" : "EN",
+			"abstract" : " One of the bottlenecks of example-based machine\n translation (EBMT) is to be able to amass\n automatically quantities of good examples. In our\n work in EBMT, we are investigating how far one can\n go by performing example extraction from parallel\n corpora using Probabilistic Translation Dictionaries\n to obtain example segmentation points. In fact, the\n success of EBMT highly depends on examples quality\n and quantity, but also in their length. Thus, we\n give special importance on methods to extract\n different size examples from the same translation\n unit. With this article we show that it is possible\n to extract quantities for examples from parallel\n corpora just using probabilistic translation\n dictionaries extracted from the same corpora."
+		},{
+			"label" : "lrec06",
+			"author" : "José João Almeida and Alberto Simões",
+			"booktitle" : "Fifth international conference on Language Resources and Evaluation, LREC 2006",
+			"year" : 2006,
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/lrec06.pdf",
+			"address" : "Genova, Italy",
+			"month" : "May",
+			"lang" : "EN",
+			"abstract" : "In this article we present $T_2O$ --- a workbench to\n assist the process of translating heterogeneous\n resources into ontologies, to enrich and add\n multilingual information, to help programming with\n them, and to support ontology publishing. $T_2O$ is\n an ontology algebra."
+		},{
+			"label" : "Bansko",
+			"author" : "J. João Almeida and Alberto Simões ",
+			"title" : "Publishing multilingual ontologies: a quick way of obtaining feedback",
+			"year" : 2006,
+			"address" : "Bansko, Bulgaria",
+			"note" : "poster",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/elpub06-t2o.pdf",
+			"month" : "June",
+			"lang" : "EN",
+			"abstract" : "Dictionary and Thesaurus are valuable resources for\n Natural Language Processing but do not exist as\n freely available as expected, especially for\n languages other than English and, when they exist,\n they are just available for querying online. Our\n main goal with T2O --- Thesaurus to Ontology\n framework --- is to create a multilingual ontology:\n freely available online and to download; with a\n computer readable format; with a good API; with a\n structure as rich as possible; reusing all the\n structured information we can get; "
+		},{
+			"label" : "Bansko",
+			"author" : "António R. Fernandes and Alexandre Carvalho and J. João Almeida and Alberto Simões ",
+			"title" : "Transcoding for Web Accessibility for the Blind: Semantics\nfrom Structure",
+			"booktitle" : "ElPub 2006 --- Digital Spectrum: Integrating Technology and Culture",
+			"year" : 2006,
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/elpub06-blind.pdf",
+			"address" : "Bansko, Bulgaria",
+			"month" : "June",
+			"abstract" : "True accessibility requires minimizing the scanning time\n to find a particular piece of\n information. Sequentially reading web pages do not\n provide this type of accessibility, for instance\n before the user gets to the actual text content of\n the page it has to go through a lot of menus and\n headers. However if the user could navigate a web\n page based through semantically classified blocks\n then the user could jump faster to the actual\n content of the page, skipping all the menus and\n other parts of the page. We propose a transcoding\n engine that tackles accessibility at two distinct,\n yet complementary, levels: for specific known sites\n and general unknown sites. We present a tool for\n building customized scripts for known sites that\n turns this process in an extremely simple task,\n which can be performed by anyone, without any\n expertise. For general unknown sites, our approach\n relies on statistical analysis of the structural\n blocks that define a web page to infer a semantic\n for the block.",
+			"lang" : "EN"
+		},{
+			"label" : "MP07",
+			"author" : "Alberto Simões and Rúben Fonseca and José João Almeida",
+			"booktitle" : "Euro-Par 2007",
+			"year" : 2007,
+			"address" : "Rennes, France",
+			"month" : "August",
+			"pages" : "33--41",
+			"editor" : "Anne-Marie Kermarrec and Luc Bougé and Thierry Priol",
+			"volume" : 4641,
+			"series" : "LNCS",
+			"publisher" : "Springer-Verlag",
+			"abstract" : " Some processes are not easy to be programmed from scratch\nfor\n parallel machines (clusters), but can be easily split on simple\n steps. Makefile::Parallel is a tool which lets users to specify how processes\n depend on each other.\n\n The language syntax resembles the well known Makefile\n makefiles format, but instead of specifying files or targets\n dependencies, Makefile::Parallel specifies processes (or jobs) dependencies.\n\n The scheduler submits jobs to the cluster scheduler (in our case,\n Rocks PBS) waiting them to end. When each process finishes,\n dependencies are calculated and direct dependent jobs are submitted.\n\n Makefile::Parallel language includes features to specify parametric rules,\nused\n to split and join processes dependencies. Some tasks can be split\n into n smaller jobs working on different portions of files. At the\n end, another process can be used to join the results.\n"
+		},{
+			"label" : "Epia",
+			"booktitle" : "New Trends in Artificial Intelligence",
+			"editor" : "José Neves and Manuel Filipe Santos and José Manuel Machado",
+			"pages" : "541--552",
+			"isbn13" : "978-989-95618-0-9",
+			"author" : " Anália Lourenço and Alberto Simões and José Almeida and\nMiguel Rocha and Isabel Rocha and Eugénio Ferreira",
+			"title" : "An Ontology-Based Approach To Systems Biology Literature\nRetrieval and Processing",
+			"shortin" : "Epia, CMBSB",
+			"year" : 2007,
+			"month" : "December"
+		},{
+			"label" : "Epia",
+			"booktitle" : "New Trends in Artificial Intelligence",
+			"editor" : "José Neves and Manuel Filipe Santos and José Manuel Machado",
+			"shortin" : "Epia, TEMA",
+			"pages" : "791--799",
+			"author" : "Alberto Simões and Anália Lourenço and José João Almeida",
+			"title" : "Using Text Mining Techniques for Classical Music Scores\nAnalysis",
+			"year" : 2007,
+			"month" : "December",
+			"abstract" : "Abstract.Music Classification is a particular area\n of Computational Musicology that provides valuable\n insights about the evolving of composition patterns\n and assists in catalogue generation. The proposed work\n detaches from former works by classifying music based\n on music score information. Text Mining techniques\n support music score processing while Classification\n techniques are used in the construction of decision\n models. Although research is still at its earliest\n beginnings, the work already provides valuable\n contributes to symbolic music representation processing\n and subsequent analysis. Score processing involved\n the counting of ascending and descending chromatic\n intervals, note duration and meta-information\n tagging. Analysis involved feature selection and\n the evaluation of several data mining algorithms,\n ensuring extensibility towards larger repositories or\n more complex problems. Experiments report the analysis\n of composition epochs on a subset of the Mutopia project\n open archive of classical LilyPond-annotated\n music scores.\n "
+		},{
+			"label" : "HKMVZ03",
+			"author" : "Pedro Henriques and Tomaz Kosar and Marjan Mernik and Maria João Varanda and Viljem Zumer",
+			"title" : "Grammatical Approach to Problem Solving",
+			"booktitle" : "ITI'03 - 25th International Conference on Information Technology Interfaces, Croacia",
+			"publisher" : "IEEE",
+			"year" : 2003
+		},{
+			"label" : "VH01",
+			"author" : "M. J. Varanda and Pedro Rangel Henriques",
+			"title" : "Visualization / Animation of Programs based on Abstract Representations and Formal Mappings",
+			"booktitle" : "HCC'01 - 2001 IEEE Symposia on Human-Centric Computing Languages and Environments",
+			"publisher" : "IEEE",
+			"year" : 2001
+		},{
+			"label" : "VH02",
+			"author" : "P. Henriques and M. J. Varanda and M. Mernik and M. Lenic",
+			"title" : "Automatic Generation of Language-based Tools",
+			"booktitle" : "LDTA - Workshop on Language, Descriptions, Tools and Applications (ETAPS'02)",
+			"year" : 2002
+		},{
+			"label" : "VH03",
+			"author" : "M. J. Varanda and P. Henriques",
+			"title" : "Visualization / Animation of Programs in Alma: obtaining different results",
+			"booktitle" : "VMSE2003 - Symposium on Visual and Multimedia Software Engineering (HCC'03), New Zealand",
+			"publisher" : "IEEE",
+			"year" : 2003,
+			"editor" : ""
+		},{
+			"label" : "RMHVC06",
+			"author" : "Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria João Varanda Pereira and Daniela Cruz",
+			"title" : " Specifying Languages using Aspect-oriented Approach: AspectLISA",
+			"booktitle" : "ITI'06 - 28th International Conference on Information Technology Interfaces, Croacia",
+			"publisher" : "IEEE",
+			"pages" : "",
+			"year" : 2006
+		},{
+			"label" : "BHVU07d",
+			"author" : "Mario Berón and Pedro Rangel Henriques and M. João Varanda and Roberto Uzal",
+			"title" : "PICS una Herramienta para la Comprensión e Inspección de Programas",
+			"booktitle" : "CACIC'07 - XIII Argentine Congress on Computer Science",
+			"publisher" : "Corrientes, Argentina",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "BHVU07c",
+			"author" : "Mario Berón and Pedro Rangel Henriques and M. João Varanda and Roberto Uzal",
+			"title" : "Program Inspection to Incerconnect Behavioral and Operational View for Program Comprehension",
+			"booktitle" : "York Doctoral Symposium, 2007",
+			"publisher" : "University of York, UK",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "BHVU07b",
+			"author" : "Mario Berón and Pedro Rangel Henriques and M. João Varanda and Roberto Uzal",
+			"title" : "Comprensión de Programas por Inspección Visual y Animación",
+			"booktitle" : "IX Workshop de Investigadores en Ciencias de la Computación (WICC 2007), Argentina",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "BHVU07a",
+			"author" : "Mario Berón and Pedro Rangel Henriques and M. João Varanda and Roberto Uzal",
+			"title" : "Static and Dynamic Strategies to Understand C Programs by Code Annotation",
+			"booktitle" : "OpenCert'07, 1st Int. Workshop on Fondations and Techniques for Open Source Software Certification (collocated with ETAPS'07)",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "CHLB07a",
+			"author" : "Elisabete Cunha and Pedro Rangel Henriques and Sandra Lopes and Mario Béron",
+			"title" : "O Sitio de Pico, Software Educativo para Crianças con Paralisia Cerebral",
+			"booktitle" : "IX Workshop de Investigadores en Ciencias de la Computación (WICC 2007), Argentina",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "BHVU06a",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda and Roberto Uzal",
+			"title" : "Herramientas para la compresión de programas",
+			"booktitle" : "VIII Workshop de Investigadores en Ciencias de la Computación (WICC 2006), Universidade de Morón, Bs. As., Argentina",
+			"year" : 2006,
+			"editor" : ""
+		},{
+			"label" : "BHVU06b",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda and Roberto Uzal",
+			"title" : "Comprensión de Algoritmos de Ruteo",
+			"booktitle" : "XXXII Conferencia Latinoamericana de Informática (CLEI 2006), Santiago de Chile",
+			"year" : 2006,
+			"editor" : ""
+		},{
+			"label" : "BHVUM06",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda and Roberto Uzal and G. Montejano",
+			"title" : "A Language Processing Tool for Program Comprehension",
+			"booktitle" : "CACIC'06 - XII Argentine Congress on Computer Science",
+			"publisher" : "Universidad Nacional de San Luis, Argentina",
+			"year" : 2006
+		},{
+			"label" : "BHVU08",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda and Roberto Uzal",
+			"title" : "Simplificando la Comprensión de Programas a través de la Interconnexión de Dominios",
+			"booktitle" : "CACIC'08 - XIV Argentine Congress on Computer Science, Universidad Nacional de San Luis, Argentina",
+			"publisher" : "Universidad Nacional de Chilecito, La Rioja, Argentina",
+			"year" : 2008
+		},{
+			"label" : "BHV06",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda",
+			"title" : "A System for Evaluate and Understand Routing Algorithms",
+			"booktitle" : "Interacção'06, Universidade do Minho",
+			"year" : 2006,
+			"editor" : ""
+		},{
+			"label" : "BCVHU08",
+			"author" : "Mario Béron and Daniela da Cruz and Maria João Varanda and Pedro Rangel Henriques and Roberto Uzal",
+			"title" : "Evaluation Criteria of Software Visualization Systems used for Program Comprehension",
+			"booktitle" : "Interacção'08 -- 3ª Conferência Interacção Pessoa-Máquina",
+			"editor" : "Universidade de Évora",
+			"year" : 2008
+		},{
+			"label" : "BUHV08",
+			"author" : "Mario Berón and Roberto Uzal and Pedro Rangel Henriques and Maria João Varanda Pereira",
+			"title" : "Inspección de Código para relacionar los Dominios del Problema y Programa para la Comprensión de Programas",
+			"booktitle" : "X Workshop de Investigadores en Ciencias de la Computación (WICC 2008), La Pampa, Argentina",
+			"publisher" : "Facultad de Engeniería de la Universidad Nacional de la Pampa",
+			"year" : 2008,
+			"editor" : "UNLPam,RedUNCI"
+		},{
+			"label" : "OVH05",
+			"author" : "Eva Oliveira and Maria João Varanda and Pedro Rangel Henriques",
+			"title" : "Compreensão de Aplicações Web: O Processo e as Ferramentas",
+			"booktitle" : "CAPSI05 - Conferência da Associação Portuguesa de Sistemas de Informação, ESTiG Bragança",
+			"year" : 2005
+		},{
+			"label" : "OHV06",
+			"author" : "Eva Oliveira and Pedro Rangel Henriques and Maria João Varanda ",
+			"title" : "Proposta de um Sistema para Compreensão de Aplicações Web",
+			"booktitle" : "CAPSI06 - Conferência da Associação Portuguesa de Sistemas de Informação, Univ. Aveiro",
+			"year" : 2007
+		},{
+			"label" : "GH07b",
+			"author" : "Alda Gancarski and Pedro Rangel Henriques",
+			"title" : "Analyzing the structure of scientific articles to improve information retrieval",
+			"booktitle" : "Proceedings of the Int. IADIS Conference on Applied Computing 2007 (IADIS AC07 - Salamanca, Spain)",
+			"year" : 2007,
+			"editor" : "Pedro Isaias and Nuno Mamede"
+		},{
+			"label" : "GH07a",
+			"author" : "Alda Gancarski and Pedro Rangel Henriques",
+			"title" : "Using data together with metadata to improve XML information access",
+			"booktitle" : "Proceedings of the Int. Conference on Web Information Systems and Technologies (WEBIST07 - Barcelona, Spain)",
+			"year" : 2007,
+			"editor" : ""
+		},{
+			"label" : "GFH08",
+			"author" : "Alda Gancarski and Flávio Xavier Ferreira and Pedro Rangel Henriques",
+			"title" : "Using data together with metadata to improve XML information access",
+			"booktitle" : "Proceedings of the 10th Int. Conference on Enterprise Information Systems (ICEIS'08)",
+			"address" : "Barcelona, Spain",
+			"year" : 2008
+		},{
+			"label" : "FGH08",
+			"author" : "Flávio Xavier Ferreira and Alda Lopes Gancarski and Pedro Rangel Henriques",
+			"title" : "Information access from XML using semantics and context: application to the Portuguese Emigration Museum",
+			"booktitle" : "CAPSI'08 -- 8ª Conferência da Associação Portuguesa de Sistemas de Informação",
+			"address" : "Setubal, Portugal",
+			"year" : 2008,
+			"month" : "Oct"
+		},{
+			"label" : "FH08",
+			"author" : "Flávio Xavier Ferreira and Pedro Rangel Henriques",
+			"title" : "Using OWL to specify and build different views over the Emigration Museum resources",
+			"year" : 2008
+		},{
+			"label" : "LPRH07",
+			"author" : "Giovani Rubert Librelotto\n and Renato Preigschadt de Azevedo\n and José Carlos Ramalho\n and Pedro Rangel Henriques",
+			"title" : "Navegando na Rede Semântica dos Topic Maps com o Ulisses",
+			"booktitle" : "XATA 2007 - XML: Aplicações e Tecnologias Associadas (5ª Conferência Nacional)",
+			"year" : 2007,
+			"address" : "Lisboa - Portugal",
+			"month" : "Feb"
+		},{
+			"label" : "LRHGT08",
+			"author" : "Giovani Rubert Librelotto\n and José Carlos Ramalho\n and Pedro Rangel Henriques\n and Jonas Bulegon Gassen\n and Rogério Corrêa Turchetti",
+			"title" : "A Framework to specify, extract and manage Topic Maps driven by ontologie",
+			"booktitle" : "SIGDPC'08 -- 26th ACM International Conference on Design of Communication",
+			"address" : "Lisboa, Portugal",
+			"year" : 2008,
+			"month" : "Sep"
+		},{
+			"label" : "LGFSSAH08",
+			"author" : "Giovani Rubert Librelotto\n and Jonas Bulegon Gassen\n and Leandro O. Freitas\n and Matheus C. Silveira\n and Fábio L. Silva\n and Iara Augustin\n and Pedro Rangel Henriques",
+			"title" : "Uma Ontologia aplicada a um Ambiente Pervasivo Hospitalar",
+			"booktitle" : "CAPSI'08 -- 8ª Conferência da Associação Portuguesa de Sistemas de Informação",
+			"address" : "Setubal, Portugal",
+			"year" : 2008,
+			"month" : "Oct"
+		},{
+			"label" : "LMMVRH08",
+			"author" : "Giovani Rubert Librelotto\n and Mirkos Martins\n and Henrique Machado\n and Juliana Vizzotto\n and José Carlos Ramalho\n and Pedro Rangel Henriques",
+			"title" : "Generating a Semantic Network for PubMed",
+			"year" : 2008
+		},{
+			"label" : "CPH07f",
+			"author" : "Daniela da Cruz and Maria João Varanda Pereira and Pedro Rangel Henriques",
+			"title" : "Pattern-based Program Visualization",
+			"booktitle" : "1st Workshop on Advances in Programming Languages, WAPL'07 --- evento satélite da\n International Multiconference on Computer Science and Information Technology, IMCSIT'07 --- Wisla, Polónia",
+			"year" : 2007,
+			"editor" : "",
+			"month" : "Oct"
+		},{
+			"label" : "CH07g",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques",
+			"title" : "Slicing wxHaskell modules to derive the User Interface Abstract Model (short paper and poster)",
+			"booktitle" : "WAPL'07 ---1st Workshop on Applications of Programming Languages,\n a satellite event of International Multiconference on Computer Science and Information Technology, IMCSIT'07, Wisla, Poland",
+			"year" : 2007
+		},{
+			"label" : "CH07h",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques",
+			"booktitle" : "Extreme Markup Languages'07, Montreal, Canada",
+			"year" : 2007
+		},{
+			"label" : "FCHV08",
+			"author" : "Ruben Fonseca and Daniela da Cruz and Pedro Henriques and Maria João Varanda Pereira",
+			"title" : "How to interconnect operational and behavioral views of web applications",
+			"booktitle" : "ICPC'08 - 16th International Conference on Program Comprehension",
+			"publisher" : "Amsterdam, Holanda",
+			"year" : 2008,
+			"editor" : "IEEE"
+		},{
+			"label" : "CHP08i",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+			"title" : "Strategies for Program Inspection and Visualization",
+			"booktitle" : "CSE --- International Scientific Conference on Computer Science and Engineering, High Tatras - Stará Lesná, Slovakia",
+			"year" : 2008
+		},{
+			"label" : "CH07a",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques",
+			"booktitle" : "XML: Aplicações e Tecnologias Associadas, XATA'07, Lisboa, Portugal",
+			"year" : 2007
+		},{
+			"label" : "CLH07c",
+			"author" : "Daniela da Cruz and Sandra Cristina Lopes and Pedro Rangel Henriques",
+			"title" : "Como ensinar com Mapas de Conceitos: duas abordagens complementares",
+			"booktitle" : "Challenges'07, Universidade do Minho --- Braga, Portugual",
+			"year" : 2007,
+			"editor" : "",
+			"month" : "Mai"
+		},{
+			"label" : "CH07d",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques",
+			"title" : "LISS --- The language and the compiler",
+			"booktitle" : "Proceedings of the 1.st Conference on Compiler Related Technologies and Applications, CoRTA'07 ---\n Universidade da Beira Interior, Portugal",
+			"year" : 2007,
+			"editor" : "",
+			"month" : "Jul"
+		},{
+			"label" : "CFPBH07d",
+			"author" : "Daniela da Cruz and Rúben Fonseca and Maria João Varanda Pereira and Mário Béron and Pedro Rangel Henriques",
+			"title" : "Comparing Generators for Language-based Tools",
+			"booktitle" : "CoRTA-07 - Compiler Related Techonlogies and Applications, Covilhã, Portugual",
+			"year" : 2007
+		},{
+			"label" : "CHP08a",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+			"year" : 2008
+		},{
+			"label" : "CHP08b",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda Pereira",
+			"booktitle" : "CoRTA08 --- Compilers, Related Technologies and Applications, Bragança, Portugal",
+			"year" : 2008
+		},{
+			"label" : "CPH08c",
+			"author" : "Daniela da Cruz and Jorge Sousa Pinto and Pedro Rangel Henriques",
+			"title" : "Properties Preservation during Transformation (short paper)",
+			"booktitle" : "CoRTA08 --- Compilers, Related Technologies and Applications, Bragança, Portugal",
+			"year" : 2008,
+			"month" : "July"
+		},{
+			"label" : "FPCH08d",
+			"author" : "Elisabete Ferreira and Rogério Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+			"booktitle" : "CoRTA08 --- Compilers, Related Technologies and Applications, Bragança, Portugal",
+			"year" : 2008
+		},{
+			"label" : "PMCH08e",
+			"author" : "Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+			"booktitle" : "CoRTA08 --- Compilers, Related Technologies and Applications, Bragança, Portugal",
+			"year" : 2008
+		},{
+			"label" : "PMCH08f",
+			"author" : "Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+			"title" : "Program Comprehension for Domain-Specific Languages",
+			"booktitle" : "CoRTA08 --- Compilers, Related Technologies and Applications, Bragança, Portugal",
+			"year" : 2008
+		},{
+			"label" : "CHP09a",
+			"author" : "Daniela da Cruz and Pedro Henriques and Jorge Sousa Pinto",
+			"title" : "Code Analysis: Past and Present",
+			"booktitle" : "Proceedings of the Third Int. Workshop on Foundations and Techniques for Open Source Software Certification (OpenCert 2009)",
+			"editor" : "Luis Barbosa and Antonio Cerone and Siraj Shaikh ",
+			"publisher" : "Electronic Communications of the EASST",
+			"Volume" : "X (2009)",
+			"year" : 2009,
+			"month" : "March"
+		},{
+			"label" : "OPCH09a",
+			"author" : "Nuno Oliveira and Maria João Varanda Pereira and Daniela da Cruz and Pedro Rangel Henriques",
+			"title" : "Visualization of Domain-Specific Programs' Behavior",
+			"booktitle" : "Proceedings of VISSOFT'09 --- 5th IEEE International Workshop on Visualizing Software for Understanding and Analysis,\n Edmonton, Canada",
+			"pages" : "37 --- 40",
+			"publisher" : "IEEE Computer Society",
+			"year" : 2009
+		},{
+			"label" : "oliveira09b",
+			"title" : "Applying Program Comprehension Techniques to Karel Robot Programs",
+			"author" : "Oliveira, Nuno and and Henriques, Pedro Rangel and\n da Cruz, Daniela and Pereira, Maria João Varanda and\n Mernik, Marjan and Kosar, Tomaz and Crepinsek, Matej",
+			"booktitle" : "Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
+			"pages" : "697 --- 704",
+			"publisher" : "IEEE Computer Society Press",
+			"address" : "Mragowo, Poland",
+			"year" : 2009,
+			"month" : "October"
+		},{
+			"label" : "oliveira09c",
+			"title" : "VisualLISA: Visual Programming Environment for Attribute Grammars Specification",
+			"author" : "Oliveira, Nuno and and Henriques, Pedro Rangel and da Cruz, Daniela and Pereira, Maria João Varanda",
+			"booktitle" : "Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
+			"pages" : "689 -- 696",
+			"publisher" : "IEEE Computer Society Press",
+			"address" : "Mragowo, Poland",
+			"year" : 2009,
+			"month" : "October"
+		},{
+			"label" : "kosar09",
+			"title" : "Influence of domain-specific notation to program understanding",
+			"author" : "Kosar, Tomaz and Mernik, Marjan\n and Henriques, Pedro Rangel and da Cruz, Daniela and\n Pereira, Maria João Varanda and Oliveira, Nuno",
+			"booktitle" : "Proceedings of the International Multiconference on Computer Science and Information Technology -- 2nd Workshop on Advances in Programming Languages (WAPL'2009)",
+			"pages" : "673 --- 680",
+			"publisher" : "IEEE Computer Society Press",
+			"address" : "Mragowo, Poland",
+			"year" : 2009,
+			"month" : "October"
+		},{
+			"label" : "FCHGD09a",
+			"author" : "Flávio Xavier Ferreira and Daniela da Cruz and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+			"title" : "A Query-by-Example Approach for XML Querying",
+			"booktitle" : "CISTI'09 --- 4ªConferência Ibérica em Sistemas e Tecnologias da Informação\n (WSIAI'09 -- Workshop em Sistemas Inteligentes e Aplicações)",
+			"editor" : "Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+			"pages" : "611-614",
+			"address" : "Póvoa do Varzim, Portugal",
+			"year" : 2009,
+			"month" : "Jun"
+		},{
+			"label" : "ORH09a",
+			"author" : "Paulo Jorge Oliveria and Maria de Fátima Rodrigues and Pedro Rangel Henriques",
+			"title" : "SMARTCLEAN: uma ferramenta para a limpeza incremental de dados",
+			"booktitle" : "CISTI'09 --- 4ªConferência Ibérica em Sistemas e Tecnologias da Informação\n (WSIAI'09 -- Workshop em Sistemas Inteligentes e Aplicações)",
+			"editor" : "Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+			"pages" : "621-626",
+			"address" : "Póvoa do Varzim, Portugal",
+			"year" : 2009,
+			"month" : "Jun"
+		},{
+			"label" : "LPH09a",
+			"author" : "Giovani Rubert Librelotto and Rafael Teodósio Pereira and Pedro Rangel Henriques",
+			"title" : "Uma metodologia para Consultas aos Bancos de Dados do NCBI",
+			"booktitle" : "CISTI'09 --- 4ªConferência Ibérica em Sistemas e Tecnologias da Informação",
+			"editor" : "Álvaro Rocha and Francisco Restivo and Luís Paulo Reis and Sofia Torrão",
+			"pages" : "103-108",
+			"address" : "Póvoa do Varzim, Portugal",
+			"year" : 2009,
+			"month" : "Jun"
+		},{
+			"label" : "OPHC09a",
+			"author" : "Nuno Oliveira and Maria João Varanda Pereira and\n Pedro Rangel Henriques and Daniela da Cruz",
+			"title" : "Domain Specific Languages: A Theoretical Survey",
+			"booktitle" : "INForum'09 --- Simpósio de Informática",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"address" : "Lisboa, Portugal",
+			"pages" : "35 --- 46",
+			"year" : 2009
+		},{
+			"label" : "OPHCC09",
+			"author" : "Nuno Oliveira and Maria João Varanda Pereira and\n Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
+			"booktitle" : "INForum'09 --- Simpósio de Informática",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"address" : "Lisboa, Portugal",
+			"pages" : "155 --- 167",
+			"year" : 2009,
+			"month" : "September"
+		},{
+			"label" : "MKCHCPO09",
+			"author" : "Marjan Mernik and Tomaz Kosar\n and Pedro Rangel Henriques and Daniela da Cruz and\n Maria João Varanda Pereira and Nuno Oliveira ",
+			"title" : "Comparison of XAML and C# Forms using Cognitive Dimensions Framework",
+			"booktitle" : "INForum'09 --- Simpósio de Informática",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"address" : "Lisboa, Portugal",
+			"pages" : "180 --- 191",
+			"year" : 2009
+		},{
+			"label" : "OHCP09",
+			"author" : "Nuno Oliveira and Pedro Rangel Henriques and Daniela da Cruz and Maria João Varanda Pereira",
+			"title" : "XAGra - An XML Dialect for Attribute Grammars",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"booktitle" : "INForum'09 --- Simpósio de Informática",
+			"address" : "Lisboa, Portugal",
+			"pages" : "409 --- 420",
+			"year" : 2009
+		},{
+			"label" : "FCHGD09b",
+			"author" : "Daniela da Cruz and Flávio Xavier Ferreira and Pedro Rangel Henriques and Alda Lopes Gancarski and Bruno Defude",
+			"title" : "GuessXQ, an inference Web-engine for querying XML Documents",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"booktitle" : "INForum'09 --- Simpósio de Informática",
+			"address" : "Lisboa, Portugal",
+			"pages" : "322 -- 325",
+			"year" : 2009
+		},{
+			"label" : "BHVU09",
+			"author" : "Mario Béron and Pedro Rangel Henriques and Maria João Varanda Pereira and Roberto Uzal",
+			"title" : "Instrumentaciones de Programas Escritos en C para Interrelacionar las Vistas Comportamental y Operacional de los Sistemas de Software",
+			"booktitle" : "CACIC'09 - XV Argentine Congress on Computer Science",
+			"publisher" : "Universidad Nacional de Jujuy, Argentina",
+			"year" : 2009
+		},{
+			"label" : "CH09d",
+			"address" : "Milan, Italy",
+			"author" : "Daniela da Cruz and Pedro Henriques ",
+			"booktitle" : "ICEIS --- 11th International Conference on Enterprise Information Systems",
+			"title" : "Assessing Databases in .Net: comparing approaches",
+			"year" : 2009
+		},{
+			"label" : "CH2010a",
+			"AUTHOR" : "Daniela da Cruz and Pedro Rangel Henriques",
+			"TITLE" : "Exploring, Visualizing and Slicing the Soul of XML Documents",
+			"BOOKTITLE" : "Proceedings of 25th Symposium On Applied Computing - Document Engineering",
+			"YEAR" : 2010
+		}
+	],
+	"techreport" : [
+		{
+			"label" : "tlc89",
+			"author" : "J.J. Almeida and J.B. Barros",
+			"title" : "Teoria das Linguagens ",
+			"institution" : "umdi",
+			"type" : "Texto didáctico",
+			"keyword" : "compiladores"
+		},{
+			"label" : "estruturasdedados90",
+			"author" : "J.B. Barros and J.J. Almeida",
+			"title" : "Estruturas de Dados",
+			"institution" : "umdi",
+			"type" : "Texto didáctico",
+			"keyword" : "algoritmos"
+		},{
+			"label" : "Camila",
+			"editor" : "L.S. Barbosa and J.J. Almeida and J.N. Oliveira and Luís Neves",
+			"title" : "Camila - A Platform for Software Mathematical Development",
+			"url" : "http://camila.di.uminho.pt",
+			"type" : "(Páginas do projecto)",
+			"institution" : "umdi",
+			"keyword" : "FS"
+		},{
+			"label" : "Natura",
+			"author" : "J.J. Almeida",
+			"title" : "{Natura} - Natural language processing",
+			"url" : "http://natura.di.uminho.pt/",
+			"type" : "(Páginas do projecto)",
+			"note" : "http://natura.di.uminho.pt/",
+			"institution" : "umdi",
+			"keyword" : "PLN"
+		},{
+			"label" : "jspell1",
+			"author" : "J.J. Almeida and Ulisses Pinto",
+			"title" : "Manual de Utilizador do {JSpell}",
+			"type" : "Manual",
+			"month" : "Jul",
+			"institution" : "umdi",
+			"keyword" : "morphology, lexical analysis,jspell",
+			"abstract" : "",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/jspellman.ps.gz"
+		},{
+			"label" : "jj95",
+			"author" : "J.J. Almeida",
+			"title" : "{NLlex} -- a tool to generate lexical analysers for natural language",
+			"institution" : "umdi",
+			"number" : "UM-DI-95.04",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/nllex.ps.gz",
+			"keyword" : "jspell,morphology,lex,PLN,nllex"
+		},{
+			"label" : "Barbosa95",
+			"author" : "L.S. Barbosa and J.J. Almeida",
+			"title" : "System Prototyping in Camila",
+			"number" : "DI-CAM-95:11:1",
+			"institution" : "University of Minho",
+			"note" : "Lecture notes for the System Design Course,\n Computer System Engineering, University of Bristol",
+			"url" : "http://www.di.uminho.pt/~lsb/pub_camila/LNcam.ps.gz",
+			"keyword" : "Camila, formal specification"
+		},{
+			"label" : "Barbosa95a",
+			"author" : "L.S. Barbosa and J.J. Almeida",
+			"title" : "Camila: A reference Manual",
+			"number" : "DI-CAM-95:11:2",
+			"institution" : "University of Minho",
+			"url" : "http://www.di.uminho.pt/~lsb/pub_camila/RMcam.ps.gz",
+			"keyword" : "Camila"
+		},{
+			"label" : "BA97a",
+			"keyword" : "Formal Methods, Prototyping, Camila",
+			"author" : "L.S. Barbosa and J.J. Almeida",
+			"title" : "Systems Prototyping in Camila",
+			"type" : "{Lecture Notes for the Bristol Course (1st ed. 1995)}",
+			"institution" : "DI (U. Minho)"
+		},{
+			"label" : "Barbosa95b",
+			"author" : "L.S. Barbosa and J.J. Almeida",
+			"title" : "Growing Up With Camila",
+			"institution" : "umdi",
+			"number" : "DI-CAM-95:7:1",
+			"url" : "http://www.di.uminho.pt/~lsb/pub_camila/romantic.ps.gz",
+			"keyword" : "Camila, formal specification, didatics"
+		},{
+			"label" : "Almeida96c",
+			"author" : "J.J. Almeida and J.C. Ramalho",
+			"title" : "From {BiBTeX} to {HTML} semantic nets",
+			"institution" : "umdi",
+			"number" : "DI-DAV-96:1:1",
+			"docpage" : "http://www.di.uminho.pt/~jcr/bib/dbib.html",
+			"keyword" : "PDavid, bibtex, librarian studies,html"
+		}
+	],
+	"article" : [
+		{
+			"label" : "jj96",
+			"author" : "J.J. Almeida",
+			"title" : "{NLlex} -- a tool to generate lexical analysers for natural language",
+			"month" : "Sep",
+			"volume" : 19,
+			"pages" : "81--90",
+			"journal" : "Procesamiento del Lenguaje Natural",
+			"publisher" : "Sociedade Española para el Procesamiento del Lenguaje Natural",
+			"keyword" : "jspell,morphology,lex,PLN,nllex",
+			"url" : "http://natura.di.uminho.pt/~jj/pln/nllex2.ps.gz"
+		},{
+			"label" : "Ramalho98",
+			"author" : "J.C. Ramalho and J.J. Almeida and P.R. Henriques",
+			"title" : "Algebraic specification of documents",
+			"number" : 199,
+			"pages" : "231--247",
+			"journal" : "Theoretical Computer Science",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/amilp95.ps.gz",
+			"docpage" : "http://www.di.uminho.pt/~jcr/projectos/david/ARTIGOS/AMiLP95/amilp95.html",
+			"keyword" : "PDavid, Camila, SGML"
+		},{
+			"label" : "RRAH99",
+			"author" : "J.C. Ramalho and J.G. Rocha and J.J. Almeida and P.R. Henriques",
+			"title" : "SGML documents: Where does quality go?",
+			"journal" : "Markup Languages: theory and practice",
+			"Volume" : 1,
+			"pages" : "75--90",
+			"publisher" : "MIT Press",
+			"keyword" : "SGML"
+		},{
+			"label" : "parguess2002",
+			"author" : "J.J. Almeida and Alberto M. Simões and J. Alves de Castro",
+			"title" : "Grabbing parallel corpora from the web",
+			"publisher" : "Sociedade Española para el Procesamiento del Lenguaje Natural",
+			"journal" : "Procesamiento del Lenguaje Natural",
+			"volume" : 29,
+			"pages" : "13--20",
+			"month" : "Sep."
+		},{
+			"label" : "sepln2003",
+			"author" : "Alberto M. Simões and J.J. Almeida",
+			"title" : "{NATools} -- A Statistical Word Aligner Workbench",
+			"publisher" : "Sociedade Española para el Procesamiento del Lenguaje Natural",
+			"journal" : "Procesamiento del Lenguaje Natural",
+			"volume" : 31,
+			"pages" : "217--224",
+			"month" : "Sep.",
+			"abstract" : "This document presents the TerminUM project and the\n work done in its statistical word aligner workbench (NATools). It\n shows a variety of alignment methods for parallel corpora and\n discusses the resulting terminological dictionaries and their use:\n evaluation of sentence translations; construction of a multi-level\n navigation system for linguistic studies or statistical\n translations. ",
+			"keyword" : "natools, terminum, parallel corpora, word alignment"
+		},{
+			"label" : "xmldt2",
+			"author" : "Alberto Simões",
+			"journal" : "The Perl Review",
+			"number" : 1,
+			"volume" : 1
+		},{
+			"label" : "sepln2004",
+			"author" : "Alberto Simões and Xavier Gómez Guinovart and J.J. Almeida",
+			"title" : "Distributed Translation Memories implementation using WebServices",
+			"publisher" : "Sociedade Española para el Procesamiento del Lenguaje Natural",
+			"journal" : "Procesamiento del Lenguaje Natural",
+			"pages" : "89--94",
+			"volume" : 33,
+			"month" : "July",
+			"year" : 2004,
+			"lang" : "EN",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/dtm-sepln.pdf",
+			"keyword" : "TMs, MT, distributed translation memories, WebServices, CAT"
+		},{
+			"label" : "sepln06",
+			"author" : "Alberto Simões and J. João Almeida",
+			"year" : 2006,
+			"journal" : "Procesamiento del Lenguaje Natural",
+			"address" : "Zaragoza, Spain",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/sepln06.pdf",
+			"month" : "September",
+			"lang" : "EN",
+			"volume" : 37,
+			"pages" : "91--97",
+			"abstract" : "Parallel corpora are important resources for most\n Natural Language processing tasks. From the common\n applications, like machine translation, to the\n usually mono-lingual tasks as paraphrase detection\n and word sense disambiguation, most researchers are\n using massive parallel corpora. Thus, the\n availability of an efficient way to manage them is\n very important. This paper presents a Client-Server\n architecture to query efficiently parallel corpora\n and probabilistic translation dictionaries."
+		},{
+			"label" : "KMHVZ04",
+			"author" : "Tomaz Kosar and Marjan Mernik and Pedro Henriques and Maria João Varanda and Viljem Zumer",
+			"title" : "Grammatical Approach to Problem Solving",
+			"journal" : "Informatica Journal",
+			"volume" : 28,
+			"pages" : "393-404"
+		},{
+			"label" : "HVMLGW05",
+			"author" : "Pedro Henriques and Maria João Varanda and Marjan Mernik and Mitja Lenic and Jeff Gray and Hui Wu",
+			"title" : "Automatic Generation of Language-based Tools using LISA System",
+			"journal" : "IEE Software Journal",
+			"year" : 2005,
+			"month" : "April",
+			"volume" : 152,
+			"number" : 2
+		},{
+			"label" : "RMHV06",
+			"author" : "Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Maria João Varanda",
+			"title" : "AspectLISA: an aspect-oriented compiler construction system based on attribute grammars",
+			"journal" : "Electronic Notes in Theoretical Computer Science (ENTCS)",
+			"editor" : "J. Boyland and A. Sloane",
+			"publisher" : "Elsevier",
+			"year" : 2006,
+			"month" : "Oct",
+			"volume" : 164,
+			"number" : 2
+		},{
+			"label" : "RMHCV06",
+			"author" : "Damijan Rebernak and Marjan Mernik and Pedro Rangel Henriques and Daniela da Cruz and Maria João Varanda",
+			"title" : "Specifying Languages using aspect-oriented approach: AspectLISA",
+			"journal" : "CIT -- Journal of Computing and Information Technology",
+			"editor" : "",
+			"publisher" : "",
+			"year" : 2006,
+			"month" : "Dec",
+			"volume" : 14,
+			"number" : 4
+		},{
+			"label" : "GDH06",
+			"author" : "Gancarski, Alda and Doucet, Anne and Henriques, Pedro",
+			"title" : "{AG-based interactive system to retrieve information from XML documents}",
+			"journal" : "{IEE Software Journal}",
+			"month" : "Apr",
+			"volume" : 153
+		},{
+			"label" : "BH98",
+			"author" : "Leonor Barroca and Pedro Rangel Henriques",
+			"title" : "A Framework and Patterns for the Specification of Reactive Systems",
+			"journal" : "IST: Information and Software Technology",
+			"editor" : "",
+			"publisher" : "Elsevier",
+			"year" : 1998,
+			"month" : "",
+			"volume" : "",
+			"number" : 40
+		},{
+			"label" : "RAH98",
+			"author" : "José Carlos Ramalho and José João Almeida and Pedro Rangel Henriques",
+			"title" : "Algebraic Specification of Documents",
+			"journal" : "TSC: Theoretical Computer Science",
+			"editor" : "",
+			"publisher" : "Elsevier",
+			"year" : 1998,
+			"month" : "Jun",
+			"volume" : 199,
+			"number" : ""
+		},{
+			"label" : "RARH98",
+			"author" : "José Carlos Ramalho and José João Almeida and Jorge Gustavo Rocha and Pedro Rangel Henriques",
+			"title" : "SGML Documents: Where does quality go?",
+			"journal" : "Mark-up Languages: theory and practice",
+			"editor" : "",
+			"publisher" : "MIT Press",
+			"year" : 1998,
+			"month" : "Nov",
+			"volume" : 1,
+			"number" : 1
+		},{
+			"label" : "GRH06",
+			"author" : "Giovani Librelotto and José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "Metamorphosis - A Topic Maps Based Environment to Handle Heterogeneous Information Resources",
+			"journal" : "Lecture Notes in Computer Science (LNCS)",
+			"editor" : "",
+			"publisher" : "Springer-Verlag GmbH",
+			"year" : 2006,
+			"month" : "",
+			"volume" : 3873,
+			"number" : ""
+		},{
+			"label" : "JGRH04",
+			"author" : "Marta Jacinto and Giovani Librelotto and José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "XCSL Tutorial",
+			"journal" : "Acm Crossroads",
+			"editor" : "",
+			"publisher" : "ACM Press",
+			"year" : 2004,
+			"month" : "",
+			"volume" : 8,
+			"number" : 5
+		},{
+			"label" : "JGRH03",
+			"author" : "Marta Jacinto and Giovani Librelotto and José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "XCSL: XML Constraint Specification Language",
+			"journal" : "CLEI Eletronic Journal",
+			"editor" : "",
+			"publisher" : "ACM Press",
+			"year" : 2003,
+			"month" : "",
+			"volume" : 6,
+			"number" : ""
+		},{
+			"label" : "GRH04",
+			"author" : "Giovani Librelotto and José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "TM-Builder: An Ontology Builder based on XML Topic Maps",
+			"journal" : "CLEI Eletronic Journal",
+			"editor" : "",
+			"publisher" : "ACM Press",
+			"year" : 2004,
+			"month" : "",
+			"volume" : 7,
+			"number" : 2
+		},{
+			"label" : "GRH05a",
+			"author" : "Giovani Librelotto and José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "Geração automática de interfaces Web para Sistemas de Informação: Metamorphosis",
+			"journal" : "Sistemas de Informação",
+			"editor" : "",
+			"publisher" : "APSI: Associação Portuguesa de Sistemas de Informação",
+			"year" : 2005,
+			"month" : "",
+			"volume" : 17,
+			"number" : ""
+		},{
+			"label" : "RH98a",
+			"author" : "José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "Qualidade na Publicação Electrónica: como controlá-la?",
+			"journal" : "Sistemas de Informação",
+			"editor" : "",
+			"publisher" : "APSI: Associação Portuguesa de Sistemas de Informação",
+			"year" : 1998,
+			"month" : "",
+			"volume" : 9,
+			"number" : ""
+		},{
+			"label" : "MSH05",
+			"author" : "Giovana Mendes and Nuno Alberto Silva and Pedro Rangel Henriques",
+			"title" : "Utilizando uma Base de Dados XML Nativa aplicada ao tratamento de erros num sistema de logs",
+			"journal" : "Sistemas de Informação",
+			"editor" : "",
+			"publisher" : "APSI: Associação Portuguesa de Sistemas de Informação",
+			"year" : 2005,
+			"month" : "",
+			"volume" : 17,
+			"number" : ""
+		},{
+			"label" : "ALHF02",
+			"author" : "Gustavo Arnold and Giovani Librelotto and Pedro Rangel Henriques and Jaime Fonseca",
+			"title" : "O Uso da Linguagem RS em Robótica",
+			"journal" : "Revista Electrónica e Telecomunicações",
+			"editor" : "",
+			"publisher" : "Departamento de Electrónica e Telecomunicações da Universidade de Aveiro",
+			"year" : 2002,
+			"month" : "Apr",
+			"volume" : "",
+			"number" : ""
+		},{
+			"label" : "CHV08ja",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda",
+			"title" : "Alma versus DDD",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
+			"editor" : "Ivan Lukovic and Simao Melo de Sousa ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2008,
+			"month" : "Dec",
+			"volume" : 5,
+			"number" : 2,
+			"pages" : "119-136"
+		},{
+			"label" : "FPCH08jb",
+			"author" : "Elisabete Ferreira and Rogério Paulo and Daniela da Cruz and Pedro Rangel Henriques",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
+			"editor" : "Ivan Lukovic and Simao Melo de Sousa ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2008,
+			"month" : "Dec",
+			"volume" : 5,
+			"number" : 2,
+			"pages" : "87-101"
+		},{
+			"label" : "PMCH08j",
+			"author" : "Maria João Varanda Pereira and Marjan Mernik and Daniela da Cruz and Pedro Rangel Henriques",
+			"title" : "Program Comprehension for Domain-Specific Languages (invited paper)",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
+			"editor" : "Ivan Lukovic and Simao Melo de Sousa ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2008,
+			"month" : "Dec",
+			"volume" : 5,
+			"number" : 2,
+			"pages" : "1-17"
+		},{
+			"label" : "CHV07",
+			"author" : "Daniela da Cruz and Pedro Rangel Henriques and Maria João Varanda",
+			"title" : "Constructing program animations using a pattern-based approach",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Advances in Programming Languages",
+			"editor" : "Ivan Lukovic and Marjan Mernik ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2007,
+			"month" : "Dec",
+			"volume" : 4,
+			"number" : 2,
+			"pages" : "97-114"
+		},{
+			"label" : "LARH09",
+			"author" : "Giovani Rubert Librelotto\n and Renato Preigschadt de Azevedo\n and José Carlos Ramalho\n and Pedro Rangel Henriques",
+			"title" : "Topic Maps Constraint Languages: understanding and comparing",
+			"journal" : "Int. Journal Reasoning-based Intelligent Systems",
+			"publisher" : "Inderscience Entreprises, Ltd.",
+			"year" : 2009,
+			"month" : "Jun",
+			"volume" : 1,
+			"number" : "3/4",
+			"pages" : "173-181"
+		},{
+			"label" : "CBHP09",
+			"author" : "Daniela da Cruz and Mario Béron and Pedro Rangel Henriques and Maria João Varanda Pereira",
+			"title" : "Code Inspection Approaches for Program Visualization",
+			"journal" : "Acta Electrotechnica et Informatica",
+			"editor" : "Linus Michaeli",
+			"publisher" : "Faculty of Electrical Engineering and Informatics, Technical University of Kosice, Slovakia",
+			"year" : 2009,
+			"month" : "Jul-Sep",
+			"volume" : 9,
+			"number" : 3,
+			"pages" : "32-42"
+		},{
+			"label" : "OPHCC2010",
+			"author" : "Nuno Oliveira and Maria João Varanda Pereira and Pedro Rangel Henriques and Daniela da Cruz and Bastian Cramer",
+			"title" : "VisualLISA: A Visual Environment to Develop Attribute Grammars",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
+			"editor" : "Ivan Lukovic and António Leitão ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2010,
+			"month" : "January"
+		},{
+			"label" : "KOMPCCH2010",
+			"author" : "Tomaz Kosar and Nuno Oliveira and Marjan Mernik and Maria João Varanda Pereira and Matej Crepinsek and Daniela\nda Cruz and Pedro Rangel Henriques",
+			"title" : "Comparing General-Purpose and Domain-Specific Languages: An Empirical Study",
+			"journal" : "ComSIS -- Computer Science an Information Systems Journal, Special Issue on Compilers, Related Technologies and Applications",
+			"editor" : "Ivan Lukovic and António Leitão ",
+			"publisher" : "Faculty of Technical Sciences, Trg Dositeja Obradovica 6, 21000 Novi Sad, Serbia",
+			"year" : 2010,
+			"month" : "January"
+		}
+	],
+	"phdthesis" : [
+		{
+			"label" : "tesejj",
+			"author" : "José João Dias de Almeida",
+			"title" : "Dicionários dinâmicos multi-fonte",
+			"school" : "Universidade do Minho",
+			"type" : "Tese de Doutoramento",
+			"superviser" : "Pedro Rangel Henriques",
+			"url" : "http://natura.di.uminho.pt/~jj/bib/tesejj.pdf",
+			"month" : "Dez.",
+			"lang" : "PT"
+		}
+	],
+	"mastersthesis" : [
+		{
+			"label" : "teseambs",
+			"author" : "Alberto Manuel Brandão Simões",
+			"title" : "Parallel Corpora word alignment and applications",
+			"school" : "Escola de Engenharia - Universidade do Minho",
+			"url" : "http://alfarrabio.di.uminho.pt/~albie/publications/msc.pdf",
+			"type" : "Tese de Mestrado",
+			"superviser" : "José João Almeida and Pedro Rangel Henriques",
+			"year" : 2004,
+			"lang" : "EN"
+		}
+	],
+	"book" : [
+		{
+			"label" : "RH02",
+			"author" : "José Carlos Ramalho and Pedro Rangel Henriques",
+			"title" : "XML & XSL: da teoria à prática",
+			"publisher" : "Editora FCA",
+			"series" : "Série Tecnologias de Informação ISBN-972-722-347-8",
+			"edition" : "1st Ed.",
+			"month" : "Oct"
+		}
+	],
+	"incollection" : [
+		{
+			"label" : "RRH02",
+			"author" : "Fátima Rodrigues and Carlos Ramos and Pedro Rangel Henriques",
+			"title" : "Data Reduction to Improve Knowledge Extraction",
+			"booktitle" : "Enterprise Information Systems III",
+			"editor" : "J.Filipe and B.Sharp ",
+			"publisher" : "Kluwer Academic Publishers",
+			"pages" : "137-145"
+		},{
+			"label" : "ORH06",
+			"author" : "Paulo Oliveira and Fátima Rodrigues and Pedro Rangel Henriques",
+			"title" : "Data Cleaning by Reusing Domain Knowledge",
+			"booktitle" : "Knowledge and Decision Technologies",
+			"editor" : "",
+			"publisher" : "ISBN: 972-8688-39-3",
+			"pages" : "67-74"
+		}
+	],
+	"misc" : [
+		{
+			"label" : "cruz09",
+			"author" : "Daniela da Cruz and Nuno Oliveira and Pedro Rangel Henriques",
+			"title" : "GraAL - A Grammar Analyzer",
+			"publisher" : "Faculdade de Ciências da Universidade de Lisboa",
+			"year" : 2009,
+			"month" : "September",
+			"address" : "Lisbon, Portugal"
+		}
+	]
+}
