@@ -8,3 +8,8 @@ Trabalho realizado por:
 [Benjamim Coelho](https://github.com/benjamimcoelho)
 
 [Henrique Neto](https://github.com/K1yps/) 
+
+Notas Finais:
+
+# TP1 : 18
+# TP2 : 19
