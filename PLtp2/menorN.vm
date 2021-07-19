@@ -1,0 +1,25 @@
+begindeclares
+	int input
+	int min
+	int n
+enddeclares
+
+prints "Quantos números vai inserir?\n"
+read n
+prints "Insira um valor\n"
+read min
+atr n= n - 1
+
+while(n>0) do
+	prints "Insira um valor\n"
+	read input
+	if (input<min)
+		atr min=input
+	else 
+	endif
+	atr n = n - 1
+endwhile
+
+prints "O mínimo é: \n"
+print min
+	

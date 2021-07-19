@@ -1,0 +1,2956 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> Programa
+Rule 1     Programa -> Operacoes
+Rule 2     Operacoes -> Operacoes Operacao
+Rule 3     Operacoes -> <empty>
+Rule 4     Operacao -> BEGINDECLARES
+Rule 5     Operacao -> ENDDECLARES
+Rule 6     Operacao -> READ VAR
+Rule 7     Operacao -> READ VAR [ EXP ]
+Rule 8     Operacao -> READ VAR [ EXP ] [ EXP ]
+Rule 9     Operacao -> IF ( CONDICOES )
+Rule 10    CONDICOES -> CONDICAO
+Rule 11    CONDICOES -> NOT CONDICOES
+Rule 12    CONDICOES -> ( CONDICOES )
+Rule 13    CONDICOES -> CONDICOES AND CONDICOES
+Rule 14    CONDICOES -> CONDICOES OR CONDICOES
+Rule 15    Operacao -> REPEAT
+Rule 16    Operacao -> UNTIL ( CONDICOES )
+Rule 17    Operacao -> FOR1 FOR3
+Rule 18    FOR3 -> FOR2 Operacao ) DO
+Rule 19    FOR2 -> CONDICOES ;
+Rule 20    Operacao -> ENDFOR
+Rule 21    Operacao -> WHILEI ( CONDICOES ) DO
+Rule 22    WHILEI -> WHILE
+Rule 23    FOR1 -> FOR ( Operacao ;
+Rule 24    Operacao -> ENDWHILE
+Rule 25    CONDICAO -> EXP = = EXP
+Rule 26    CONDICAO -> EXP ! = EXP
+Rule 27    CONDICAO -> EXP < EXP
+Rule 28    CONDICAO -> EXP > EXP
+Rule 29    CONDICAO -> EXP < = EXP
+Rule 30    CONDICAO -> EXP > = EXP
+Rule 31    Operacao -> ELSE Operacoes
+Rule 32    Operacao -> ENDIF
+Rule 33    Operacao -> INT VAR
+Rule 34    Operacao -> INT VAR = EXP
+Rule 35    Operacao -> ARRAYINT VAR [ NUM ]
+Rule 36    Operacao -> ARRAYINT VAR [ NUM ] [ NUM ]
+Rule 37    Operacao -> PRINT EXP
+Rule 38    Operacao -> ATR VAR = EXP
+Rule 39    Operacao -> ATR VAR [ EXP ] = EXP
+Rule 40    Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP
+Rule 41    Operacao -> PRINTS STRING
+Rule 42    EXP -> EXP + TERMO
+Rule 43    EXP -> EXP - TERMO
+Rule 44    EXP -> TERMO
+Rule 45    TERMO -> TERMO * FACTOR
+Rule 46    TERMO -> TERMO / FACTOR
+Rule 47    TERMO -> FACTOR
+Rule 48    FACTOR -> ( EXP )
+Rule 49    FACTOR -> NUM
+Rule 50    FACTOR -> SIGNEDNUM
+Rule 51    FACTOR -> VAR
+Rule 52    FACTOR -> VAR [ EXP ]
+Rule 53    FACTOR -> VAR [ EXP ] [ EXP ]
+
+Terminals, with rules where they appear
+
+!                    : 26
+(                    : 9 12 16 21 23 48
+)                    : 9 12 16 18 21 48
+*                    : 45
++                    : 42
+-                    : 43
+/                    : 46
+;                    : 19 23
+<                    : 27 29
+=                    : 25 25 26 29 30 34 38 39 40
+>                    : 28 30
+AND                  : 13
+ARRAYINT             : 35 36
+ATR                  : 38 39 40
+BEGINDECLARES        : 4
+DO                   : 18 21
+ELSE                 : 31
+ENDDECLARES          : 5
+ENDFOR               : 20
+ENDIF                : 32
+ENDWHILE             : 24
+FOR                  : 23
+IF                   : 9
+INT                  : 33 34
+NOT                  : 11
+NUM                  : 35 36 36 49
+OR                   : 14
+PRINT                : 37
+PRINTS               : 41
+READ                 : 6 7 8
+REPEAT               : 15
+SIGNEDNUM            : 50
+STRING               : 41
+UNTIL                : 16
+VAR                  : 6 7 8 33 34 35 36 38 39 40 51 52 53
+WHILE                : 22
+[                    : 7 8 8 35 36 36 39 40 40 52 53 53
+]                    : 7 8 8 35 36 36 39 40 40 52 53 53
+error                : 
+
+Nonterminals, with rules where they appear
+
+CONDICAO             : 10
+CONDICOES            : 9 11 12 13 13 14 14 16 19 21
+EXP                  : 7 8 8 25 25 26 26 27 27 28 28 29 29 30 30 34 37 38 39 39 40 40 40 42 43 48 52 53 53
+FACTOR               : 45 46 47
+FOR1                 : 17
+FOR2                 : 18
+FOR3                 : 17
+Operacao             : 2 18 23
+Operacoes            : 1 2 31
+Programa             : 0
+TERMO                : 42 43 44 45 46
+WHILEI               : 21
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . Programa
+    (1) Programa -> . Operacoes
+    (2) Operacoes -> . Operacoes Operacao
+    (3) Operacoes -> .
+
+    BEGINDECLARES   reduce using rule 3 (Operacoes -> .)
+    ENDDECLARES     reduce using rule 3 (Operacoes -> .)
+    READ            reduce using rule 3 (Operacoes -> .)
+    IF              reduce using rule 3 (Operacoes -> .)
+    REPEAT          reduce using rule 3 (Operacoes -> .)
+    UNTIL           reduce using rule 3 (Operacoes -> .)
+    ENDFOR          reduce using rule 3 (Operacoes -> .)
+    ENDWHILE        reduce using rule 3 (Operacoes -> .)
+    ELSE            reduce using rule 3 (Operacoes -> .)
+    ENDIF           reduce using rule 3 (Operacoes -> .)
+    INT             reduce using rule 3 (Operacoes -> .)
+    ARRAYINT        reduce using rule 3 (Operacoes -> .)
+    PRINT           reduce using rule 3 (Operacoes -> .)
+    ATR             reduce using rule 3 (Operacoes -> .)
+    PRINTS          reduce using rule 3 (Operacoes -> .)
+    FOR             reduce using rule 3 (Operacoes -> .)
+    WHILE           reduce using rule 3 (Operacoes -> .)
+    $end            reduce using rule 3 (Operacoes -> .)
+
+    Programa                       shift and go to state 1
+    Operacoes                      shift and go to state 2
+
+state 1
+
+    (0) S' -> Programa .
+
+
+
+state 2
+
+    (1) Programa -> Operacoes .
+    (2) Operacoes -> Operacoes . Operacao
+    (4) Operacao -> . BEGINDECLARES
+    (5) Operacao -> . ENDDECLARES
+    (6) Operacao -> . READ VAR
+    (7) Operacao -> . READ VAR [ EXP ]
+    (8) Operacao -> . READ VAR [ EXP ] [ EXP ]
+    (9) Operacao -> . IF ( CONDICOES )
+    (15) Operacao -> . REPEAT
+    (16) Operacao -> . UNTIL ( CONDICOES )
+    (17) Operacao -> . FOR1 FOR3
+    (20) Operacao -> . ENDFOR
+    (21) Operacao -> . WHILEI ( CONDICOES ) DO
+    (24) Operacao -> . ENDWHILE
+    (31) Operacao -> . ELSE Operacoes
+    (32) Operacao -> . ENDIF
+    (33) Operacao -> . INT VAR
+    (34) Operacao -> . INT VAR = EXP
+    (35) Operacao -> . ARRAYINT VAR [ NUM ]
+    (36) Operacao -> . ARRAYINT VAR [ NUM ] [ NUM ]
+    (37) Operacao -> . PRINT EXP
+    (38) Operacao -> . ATR VAR = EXP
+    (39) Operacao -> . ATR VAR [ EXP ] = EXP
+    (40) Operacao -> . ATR VAR [ EXP ] [ EXP ] = EXP
+    (41) Operacao -> . PRINTS STRING
+    (23) FOR1 -> . FOR ( Operacao ;
+    (22) WHILEI -> . WHILE
+
+    $end            reduce using rule 1 (Programa -> Operacoes .)
+    BEGINDECLARES   shift and go to state 4
+    ENDDECLARES     shift and go to state 5
+    READ            shift and go to state 6
+    IF              shift and go to state 7
+    REPEAT          shift and go to state 8
+    UNTIL           shift and go to state 9
+    ENDFOR          shift and go to state 11
+    ENDWHILE        shift and go to state 13
+    ELSE            shift and go to state 14
+    ENDIF           shift and go to state 15
+    INT             shift and go to state 16
+    ARRAYINT        shift and go to state 17
+    PRINT           shift and go to state 18
+    ATR             shift and go to state 19
+    PRINTS          shift and go to state 20
+    FOR             shift and go to state 21
+    WHILE           shift and go to state 22
+
+    Operacao                       shift and go to state 3
+    FOR1                           shift and go to state 10
+    WHILEI                         shift and go to state 12
+
+state 3
+
+    (2) Operacoes -> Operacoes Operacao .
+
+    BEGINDECLARES   reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ENDDECLARES     reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    READ            reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    IF              reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    REPEAT          reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    UNTIL           reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ENDFOR          reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ENDWHILE        reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ELSE            reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ENDIF           reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    INT             reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ARRAYINT        reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    PRINT           reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ATR             reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    PRINTS          reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    FOR             reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    WHILE           reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    $end            reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    )               reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+    ;               reduce using rule 2 (Operacoes -> Operacoes Operacao .)
+
+
+state 4
+
+    (4) Operacao -> BEGINDECLARES .
+
+    BEGINDECLARES   reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ENDDECLARES     reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    READ            reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    IF              reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    REPEAT          reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    UNTIL           reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ENDFOR          reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ENDWHILE        reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ELSE            reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ENDIF           reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    INT             reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ARRAYINT        reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    PRINT           reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ATR             reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    PRINTS          reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    FOR             reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    WHILE           reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    $end            reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    )               reduce using rule 4 (Operacao -> BEGINDECLARES .)
+    ;               reduce using rule 4 (Operacao -> BEGINDECLARES .)
+
+
+state 5
+
+    (5) Operacao -> ENDDECLARES .
+
+    BEGINDECLARES   reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ENDDECLARES     reduce using rule 5 (Operacao -> ENDDECLARES .)
+    READ            reduce using rule 5 (Operacao -> ENDDECLARES .)
+    IF              reduce using rule 5 (Operacao -> ENDDECLARES .)
+    REPEAT          reduce using rule 5 (Operacao -> ENDDECLARES .)
+    UNTIL           reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ENDFOR          reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ENDWHILE        reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ELSE            reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ENDIF           reduce using rule 5 (Operacao -> ENDDECLARES .)
+    INT             reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ARRAYINT        reduce using rule 5 (Operacao -> ENDDECLARES .)
+    PRINT           reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ATR             reduce using rule 5 (Operacao -> ENDDECLARES .)
+    PRINTS          reduce using rule 5 (Operacao -> ENDDECLARES .)
+    FOR             reduce using rule 5 (Operacao -> ENDDECLARES .)
+    WHILE           reduce using rule 5 (Operacao -> ENDDECLARES .)
+    $end            reduce using rule 5 (Operacao -> ENDDECLARES .)
+    )               reduce using rule 5 (Operacao -> ENDDECLARES .)
+    ;               reduce using rule 5 (Operacao -> ENDDECLARES .)
+
+
+state 6
+
+    (6) Operacao -> READ . VAR
+    (7) Operacao -> READ . VAR [ EXP ]
+    (8) Operacao -> READ . VAR [ EXP ] [ EXP ]
+
+    VAR             shift and go to state 23
+
+
+state 7
+
+    (9) Operacao -> IF . ( CONDICOES )
+
+    (               shift and go to state 24
+
+
+state 8
+
+    (15) Operacao -> REPEAT .
+
+    BEGINDECLARES   reduce using rule 15 (Operacao -> REPEAT .)
+    ENDDECLARES     reduce using rule 15 (Operacao -> REPEAT .)
+    READ            reduce using rule 15 (Operacao -> REPEAT .)
+    IF              reduce using rule 15 (Operacao -> REPEAT .)
+    REPEAT          reduce using rule 15 (Operacao -> REPEAT .)
+    UNTIL           reduce using rule 15 (Operacao -> REPEAT .)
+    ENDFOR          reduce using rule 15 (Operacao -> REPEAT .)
+    ENDWHILE        reduce using rule 15 (Operacao -> REPEAT .)
+    ELSE            reduce using rule 15 (Operacao -> REPEAT .)
+    ENDIF           reduce using rule 15 (Operacao -> REPEAT .)
+    INT             reduce using rule 15 (Operacao -> REPEAT .)
+    ARRAYINT        reduce using rule 15 (Operacao -> REPEAT .)
+    PRINT           reduce using rule 15 (Operacao -> REPEAT .)
+    ATR             reduce using rule 15 (Operacao -> REPEAT .)
+    PRINTS          reduce using rule 15 (Operacao -> REPEAT .)
+    FOR             reduce using rule 15 (Operacao -> REPEAT .)
+    WHILE           reduce using rule 15 (Operacao -> REPEAT .)
+    $end            reduce using rule 15 (Operacao -> REPEAT .)
+    )               reduce using rule 15 (Operacao -> REPEAT .)
+    ;               reduce using rule 15 (Operacao -> REPEAT .)
+
+
+state 9
+
+    (16) Operacao -> UNTIL . ( CONDICOES )
+
+    (               shift and go to state 25
+
+
+state 10
+
+    (17) Operacao -> FOR1 . FOR3
+    (18) FOR3 -> . FOR2 Operacao ) DO
+    (19) FOR2 -> . CONDICOES ;
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    FOR3                           shift and go to state 26
+    FOR2                           shift and go to state 27
+    CONDICOES                      shift and go to state 28
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 11
+
+    (20) Operacao -> ENDFOR .
+
+    BEGINDECLARES   reduce using rule 20 (Operacao -> ENDFOR .)
+    ENDDECLARES     reduce using rule 20 (Operacao -> ENDFOR .)
+    READ            reduce using rule 20 (Operacao -> ENDFOR .)
+    IF              reduce using rule 20 (Operacao -> ENDFOR .)
+    REPEAT          reduce using rule 20 (Operacao -> ENDFOR .)
+    UNTIL           reduce using rule 20 (Operacao -> ENDFOR .)
+    ENDFOR          reduce using rule 20 (Operacao -> ENDFOR .)
+    ENDWHILE        reduce using rule 20 (Operacao -> ENDFOR .)
+    ELSE            reduce using rule 20 (Operacao -> ENDFOR .)
+    ENDIF           reduce using rule 20 (Operacao -> ENDFOR .)
+    INT             reduce using rule 20 (Operacao -> ENDFOR .)
+    ARRAYINT        reduce using rule 20 (Operacao -> ENDFOR .)
+    PRINT           reduce using rule 20 (Operacao -> ENDFOR .)
+    ATR             reduce using rule 20 (Operacao -> ENDFOR .)
+    PRINTS          reduce using rule 20 (Operacao -> ENDFOR .)
+    FOR             reduce using rule 20 (Operacao -> ENDFOR .)
+    WHILE           reduce using rule 20 (Operacao -> ENDFOR .)
+    $end            reduce using rule 20 (Operacao -> ENDFOR .)
+    )               reduce using rule 20 (Operacao -> ENDFOR .)
+    ;               reduce using rule 20 (Operacao -> ENDFOR .)
+
+
+state 12
+
+    (21) Operacao -> WHILEI . ( CONDICOES ) DO
+
+    (               shift and go to state 38
+
+
+state 13
+
+    (24) Operacao -> ENDWHILE .
+
+    BEGINDECLARES   reduce using rule 24 (Operacao -> ENDWHILE .)
+    ENDDECLARES     reduce using rule 24 (Operacao -> ENDWHILE .)
+    READ            reduce using rule 24 (Operacao -> ENDWHILE .)
+    IF              reduce using rule 24 (Operacao -> ENDWHILE .)
+    REPEAT          reduce using rule 24 (Operacao -> ENDWHILE .)
+    UNTIL           reduce using rule 24 (Operacao -> ENDWHILE .)
+    ENDFOR          reduce using rule 24 (Operacao -> ENDWHILE .)
+    ENDWHILE        reduce using rule 24 (Operacao -> ENDWHILE .)
+    ELSE            reduce using rule 24 (Operacao -> ENDWHILE .)
+    ENDIF           reduce using rule 24 (Operacao -> ENDWHILE .)
+    INT             reduce using rule 24 (Operacao -> ENDWHILE .)
+    ARRAYINT        reduce using rule 24 (Operacao -> ENDWHILE .)
+    PRINT           reduce using rule 24 (Operacao -> ENDWHILE .)
+    ATR             reduce using rule 24 (Operacao -> ENDWHILE .)
+    PRINTS          reduce using rule 24 (Operacao -> ENDWHILE .)
+    FOR             reduce using rule 24 (Operacao -> ENDWHILE .)
+    WHILE           reduce using rule 24 (Operacao -> ENDWHILE .)
+    $end            reduce using rule 24 (Operacao -> ENDWHILE .)
+    )               reduce using rule 24 (Operacao -> ENDWHILE .)
+    ;               reduce using rule 24 (Operacao -> ENDWHILE .)
+
+
+state 14
+
+    (31) Operacao -> ELSE . Operacoes
+    (2) Operacoes -> . Operacoes Operacao
+    (3) Operacoes -> .
+
+    BEGINDECLARES   reduce using rule 3 (Operacoes -> .)
+    ENDDECLARES     reduce using rule 3 (Operacoes -> .)
+    READ            reduce using rule 3 (Operacoes -> .)
+    IF              reduce using rule 3 (Operacoes -> .)
+    REPEAT          reduce using rule 3 (Operacoes -> .)
+    UNTIL           reduce using rule 3 (Operacoes -> .)
+    ENDFOR          reduce using rule 3 (Operacoes -> .)
+    ENDWHILE        reduce using rule 3 (Operacoes -> .)
+    ELSE            reduce using rule 3 (Operacoes -> .)
+    ENDIF           reduce using rule 3 (Operacoes -> .)
+    INT             reduce using rule 3 (Operacoes -> .)
+    ARRAYINT        reduce using rule 3 (Operacoes -> .)
+    PRINT           reduce using rule 3 (Operacoes -> .)
+    ATR             reduce using rule 3 (Operacoes -> .)
+    PRINTS          reduce using rule 3 (Operacoes -> .)
+    FOR             reduce using rule 3 (Operacoes -> .)
+    WHILE           reduce using rule 3 (Operacoes -> .)
+    $end            reduce using rule 3 (Operacoes -> .)
+    )               reduce using rule 3 (Operacoes -> .)
+    ;               reduce using rule 3 (Operacoes -> .)
+
+    Operacoes                      shift and go to state 39
+
+state 15
+
+    (32) Operacao -> ENDIF .
+
+    BEGINDECLARES   reduce using rule 32 (Operacao -> ENDIF .)
+    ENDDECLARES     reduce using rule 32 (Operacao -> ENDIF .)
+    READ            reduce using rule 32 (Operacao -> ENDIF .)
+    IF              reduce using rule 32 (Operacao -> ENDIF .)
+    REPEAT          reduce using rule 32 (Operacao -> ENDIF .)
+    UNTIL           reduce using rule 32 (Operacao -> ENDIF .)
+    ENDFOR          reduce using rule 32 (Operacao -> ENDIF .)
+    ENDWHILE        reduce using rule 32 (Operacao -> ENDIF .)
+    ELSE            reduce using rule 32 (Operacao -> ENDIF .)
+    ENDIF           reduce using rule 32 (Operacao -> ENDIF .)
+    INT             reduce using rule 32 (Operacao -> ENDIF .)
+    ARRAYINT        reduce using rule 32 (Operacao -> ENDIF .)
+    PRINT           reduce using rule 32 (Operacao -> ENDIF .)
+    ATR             reduce using rule 32 (Operacao -> ENDIF .)
+    PRINTS          reduce using rule 32 (Operacao -> ENDIF .)
+    FOR             reduce using rule 32 (Operacao -> ENDIF .)
+    WHILE           reduce using rule 32 (Operacao -> ENDIF .)
+    $end            reduce using rule 32 (Operacao -> ENDIF .)
+    )               reduce using rule 32 (Operacao -> ENDIF .)
+    ;               reduce using rule 32 (Operacao -> ENDIF .)
+
+
+state 16
+
+    (33) Operacao -> INT . VAR
+    (34) Operacao -> INT . VAR = EXP
+
+    VAR             shift and go to state 40
+
+
+state 17
+
+    (35) Operacao -> ARRAYINT . VAR [ NUM ]
+    (36) Operacao -> ARRAYINT . VAR [ NUM ] [ NUM ]
+
+    VAR             shift and go to state 41
+
+
+state 18
+
+    (37) Operacao -> PRINT . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 42
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 19
+
+    (38) Operacao -> ATR . VAR = EXP
+    (39) Operacao -> ATR . VAR [ EXP ] = EXP
+    (40) Operacao -> ATR . VAR [ EXP ] [ EXP ] = EXP
+
+    VAR             shift and go to state 44
+
+
+state 20
+
+    (41) Operacao -> PRINTS . STRING
+
+    STRING          shift and go to state 45
+
+
+state 21
+
+    (23) FOR1 -> FOR . ( Operacao ;
+
+    (               shift and go to state 46
+
+
+state 22
+
+    (22) WHILEI -> WHILE .
+
+    (               reduce using rule 22 (WHILEI -> WHILE .)
+
+
+state 23
+
+    (6) Operacao -> READ VAR .
+    (7) Operacao -> READ VAR . [ EXP ]
+    (8) Operacao -> READ VAR . [ EXP ] [ EXP ]
+
+    BEGINDECLARES   reduce using rule 6 (Operacao -> READ VAR .)
+    ENDDECLARES     reduce using rule 6 (Operacao -> READ VAR .)
+    READ            reduce using rule 6 (Operacao -> READ VAR .)
+    IF              reduce using rule 6 (Operacao -> READ VAR .)
+    REPEAT          reduce using rule 6 (Operacao -> READ VAR .)
+    UNTIL           reduce using rule 6 (Operacao -> READ VAR .)
+    ENDFOR          reduce using rule 6 (Operacao -> READ VAR .)
+    ENDWHILE        reduce using rule 6 (Operacao -> READ VAR .)
+    ELSE            reduce using rule 6 (Operacao -> READ VAR .)
+    ENDIF           reduce using rule 6 (Operacao -> READ VAR .)
+    INT             reduce using rule 6 (Operacao -> READ VAR .)
+    ARRAYINT        reduce using rule 6 (Operacao -> READ VAR .)
+    PRINT           reduce using rule 6 (Operacao -> READ VAR .)
+    ATR             reduce using rule 6 (Operacao -> READ VAR .)
+    PRINTS          reduce using rule 6 (Operacao -> READ VAR .)
+    FOR             reduce using rule 6 (Operacao -> READ VAR .)
+    WHILE           reduce using rule 6 (Operacao -> READ VAR .)
+    $end            reduce using rule 6 (Operacao -> READ VAR .)
+    )               reduce using rule 6 (Operacao -> READ VAR .)
+    ;               reduce using rule 6 (Operacao -> READ VAR .)
+    [               shift and go to state 47
+
+
+state 24
+
+    (9) Operacao -> IF ( . CONDICOES )
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 48
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 25
+
+    (16) Operacao -> UNTIL ( . CONDICOES )
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 49
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 26
+
+    (17) Operacao -> FOR1 FOR3 .
+
+    BEGINDECLARES   reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ENDDECLARES     reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    READ            reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    IF              reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    REPEAT          reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    UNTIL           reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ENDFOR          reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ENDWHILE        reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ELSE            reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ENDIF           reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    INT             reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ARRAYINT        reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    PRINT           reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ATR             reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    PRINTS          reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    FOR             reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    WHILE           reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    $end            reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    )               reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+    ;               reduce using rule 17 (Operacao -> FOR1 FOR3 .)
+
+
+state 27
+
+    (18) FOR3 -> FOR2 . Operacao ) DO
+    (4) Operacao -> . BEGINDECLARES
+    (5) Operacao -> . ENDDECLARES
+    (6) Operacao -> . READ VAR
+    (7) Operacao -> . READ VAR [ EXP ]
+    (8) Operacao -> . READ VAR [ EXP ] [ EXP ]
+    (9) Operacao -> . IF ( CONDICOES )
+    (15) Operacao -> . REPEAT
+    (16) Operacao -> . UNTIL ( CONDICOES )
+    (17) Operacao -> . FOR1 FOR3
+    (20) Operacao -> . ENDFOR
+    (21) Operacao -> . WHILEI ( CONDICOES ) DO
+    (24) Operacao -> . ENDWHILE
+    (31) Operacao -> . ELSE Operacoes
+    (32) Operacao -> . ENDIF
+    (33) Operacao -> . INT VAR
+    (34) Operacao -> . INT VAR = EXP
+    (35) Operacao -> . ARRAYINT VAR [ NUM ]
+    (36) Operacao -> . ARRAYINT VAR [ NUM ] [ NUM ]
+    (37) Operacao -> . PRINT EXP
+    (38) Operacao -> . ATR VAR = EXP
+    (39) Operacao -> . ATR VAR [ EXP ] = EXP
+    (40) Operacao -> . ATR VAR [ EXP ] [ EXP ] = EXP
+    (41) Operacao -> . PRINTS STRING
+    (23) FOR1 -> . FOR ( Operacao ;
+    (22) WHILEI -> . WHILE
+
+    BEGINDECLARES   shift and go to state 4
+    ENDDECLARES     shift and go to state 5
+    READ            shift and go to state 6
+    IF              shift and go to state 7
+    REPEAT          shift and go to state 8
+    UNTIL           shift and go to state 9
+    ENDFOR          shift and go to state 11
+    ENDWHILE        shift and go to state 13
+    ELSE            shift and go to state 14
+    ENDIF           shift and go to state 15
+    INT             shift and go to state 16
+    ARRAYINT        shift and go to state 17
+    PRINT           shift and go to state 18
+    ATR             shift and go to state 19
+    PRINTS          shift and go to state 20
+    FOR             shift and go to state 21
+    WHILE           shift and go to state 22
+
+    Operacao                       shift and go to state 50
+    FOR1                           shift and go to state 10
+    WHILEI                         shift and go to state 12
+
+state 28
+
+    (19) FOR2 -> CONDICOES . ;
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+    ;               shift and go to state 51
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+
+state 29
+
+    (10) CONDICOES -> CONDICAO .
+
+    ;               reduce using rule 10 (CONDICOES -> CONDICAO .)
+    AND             reduce using rule 10 (CONDICOES -> CONDICAO .)
+    OR              reduce using rule 10 (CONDICOES -> CONDICAO .)
+    )               reduce using rule 10 (CONDICOES -> CONDICAO .)
+
+
+state 30
+
+    (11) CONDICOES -> NOT . CONDICOES
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 54
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 31
+
+    (12) CONDICOES -> ( . CONDICOES )
+    (48) FACTOR -> ( . EXP )
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 55
+    EXP                            shift and go to state 56
+    CONDICAO                       shift and go to state 29
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 32
+
+    (25) CONDICAO -> EXP . = = EXP
+    (26) CONDICAO -> EXP . ! = EXP
+    (27) CONDICAO -> EXP . < EXP
+    (28) CONDICAO -> EXP . > EXP
+    (29) CONDICAO -> EXP . < = EXP
+    (30) CONDICAO -> EXP . > = EXP
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    =               shift and go to state 57
+    !               shift and go to state 58
+    <               shift and go to state 59
+    >               shift and go to state 60
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 33
+
+    (44) EXP -> TERMO .
+    (45) TERMO -> TERMO . * FACTOR
+    (46) TERMO -> TERMO . / FACTOR
+
+    =               reduce using rule 44 (EXP -> TERMO .)
+    !               reduce using rule 44 (EXP -> TERMO .)
+    <               reduce using rule 44 (EXP -> TERMO .)
+    >               reduce using rule 44 (EXP -> TERMO .)
+    +               reduce using rule 44 (EXP -> TERMO .)
+    -               reduce using rule 44 (EXP -> TERMO .)
+    BEGINDECLARES   reduce using rule 44 (EXP -> TERMO .)
+    ENDDECLARES     reduce using rule 44 (EXP -> TERMO .)
+    READ            reduce using rule 44 (EXP -> TERMO .)
+    IF              reduce using rule 44 (EXP -> TERMO .)
+    REPEAT          reduce using rule 44 (EXP -> TERMO .)
+    UNTIL           reduce using rule 44 (EXP -> TERMO .)
+    ENDFOR          reduce using rule 44 (EXP -> TERMO .)
+    ENDWHILE        reduce using rule 44 (EXP -> TERMO .)
+    ELSE            reduce using rule 44 (EXP -> TERMO .)
+    ENDIF           reduce using rule 44 (EXP -> TERMO .)
+    INT             reduce using rule 44 (EXP -> TERMO .)
+    ARRAYINT        reduce using rule 44 (EXP -> TERMO .)
+    PRINT           reduce using rule 44 (EXP -> TERMO .)
+    ATR             reduce using rule 44 (EXP -> TERMO .)
+    PRINTS          reduce using rule 44 (EXP -> TERMO .)
+    FOR             reduce using rule 44 (EXP -> TERMO .)
+    WHILE           reduce using rule 44 (EXP -> TERMO .)
+    $end            reduce using rule 44 (EXP -> TERMO .)
+    )               reduce using rule 44 (EXP -> TERMO .)
+    ;               reduce using rule 44 (EXP -> TERMO .)
+    ]               reduce using rule 44 (EXP -> TERMO .)
+    AND             reduce using rule 44 (EXP -> TERMO .)
+    OR              reduce using rule 44 (EXP -> TERMO .)
+    *               shift and go to state 63
+    /               shift and go to state 64
+
+
+state 34
+
+    (47) TERMO -> FACTOR .
+
+    *               reduce using rule 47 (TERMO -> FACTOR .)
+    /               reduce using rule 47 (TERMO -> FACTOR .)
+    =               reduce using rule 47 (TERMO -> FACTOR .)
+    !               reduce using rule 47 (TERMO -> FACTOR .)
+    <               reduce using rule 47 (TERMO -> FACTOR .)
+    >               reduce using rule 47 (TERMO -> FACTOR .)
+    +               reduce using rule 47 (TERMO -> FACTOR .)
+    -               reduce using rule 47 (TERMO -> FACTOR .)
+    BEGINDECLARES   reduce using rule 47 (TERMO -> FACTOR .)
+    ENDDECLARES     reduce using rule 47 (TERMO -> FACTOR .)
+    READ            reduce using rule 47 (TERMO -> FACTOR .)
+    IF              reduce using rule 47 (TERMO -> FACTOR .)
+    REPEAT          reduce using rule 47 (TERMO -> FACTOR .)
+    UNTIL           reduce using rule 47 (TERMO -> FACTOR .)
+    ENDFOR          reduce using rule 47 (TERMO -> FACTOR .)
+    ENDWHILE        reduce using rule 47 (TERMO -> FACTOR .)
+    ELSE            reduce using rule 47 (TERMO -> FACTOR .)
+    ENDIF           reduce using rule 47 (TERMO -> FACTOR .)
+    INT             reduce using rule 47 (TERMO -> FACTOR .)
+    ARRAYINT        reduce using rule 47 (TERMO -> FACTOR .)
+    PRINT           reduce using rule 47 (TERMO -> FACTOR .)
+    ATR             reduce using rule 47 (TERMO -> FACTOR .)
+    PRINTS          reduce using rule 47 (TERMO -> FACTOR .)
+    FOR             reduce using rule 47 (TERMO -> FACTOR .)
+    WHILE           reduce using rule 47 (TERMO -> FACTOR .)
+    $end            reduce using rule 47 (TERMO -> FACTOR .)
+    )               reduce using rule 47 (TERMO -> FACTOR .)
+    ;               reduce using rule 47 (TERMO -> FACTOR .)
+    ]               reduce using rule 47 (TERMO -> FACTOR .)
+    AND             reduce using rule 47 (TERMO -> FACTOR .)
+    OR              reduce using rule 47 (TERMO -> FACTOR .)
+
+
+state 35
+
+    (49) FACTOR -> NUM .
+
+    *               reduce using rule 49 (FACTOR -> NUM .)
+    /               reduce using rule 49 (FACTOR -> NUM .)
+    =               reduce using rule 49 (FACTOR -> NUM .)
+    !               reduce using rule 49 (FACTOR -> NUM .)
+    <               reduce using rule 49 (FACTOR -> NUM .)
+    >               reduce using rule 49 (FACTOR -> NUM .)
+    +               reduce using rule 49 (FACTOR -> NUM .)
+    -               reduce using rule 49 (FACTOR -> NUM .)
+    BEGINDECLARES   reduce using rule 49 (FACTOR -> NUM .)
+    ENDDECLARES     reduce using rule 49 (FACTOR -> NUM .)
+    READ            reduce using rule 49 (FACTOR -> NUM .)
+    IF              reduce using rule 49 (FACTOR -> NUM .)
+    REPEAT          reduce using rule 49 (FACTOR -> NUM .)
+    UNTIL           reduce using rule 49 (FACTOR -> NUM .)
+    ENDFOR          reduce using rule 49 (FACTOR -> NUM .)
+    ENDWHILE        reduce using rule 49 (FACTOR -> NUM .)
+    ELSE            reduce using rule 49 (FACTOR -> NUM .)
+    ENDIF           reduce using rule 49 (FACTOR -> NUM .)
+    INT             reduce using rule 49 (FACTOR -> NUM .)
+    ARRAYINT        reduce using rule 49 (FACTOR -> NUM .)
+    PRINT           reduce using rule 49 (FACTOR -> NUM .)
+    ATR             reduce using rule 49 (FACTOR -> NUM .)
+    PRINTS          reduce using rule 49 (FACTOR -> NUM .)
+    FOR             reduce using rule 49 (FACTOR -> NUM .)
+    WHILE           reduce using rule 49 (FACTOR -> NUM .)
+    $end            reduce using rule 49 (FACTOR -> NUM .)
+    )               reduce using rule 49 (FACTOR -> NUM .)
+    ;               reduce using rule 49 (FACTOR -> NUM .)
+    ]               reduce using rule 49 (FACTOR -> NUM .)
+    AND             reduce using rule 49 (FACTOR -> NUM .)
+    OR              reduce using rule 49 (FACTOR -> NUM .)
+
+
+state 36
+
+    (50) FACTOR -> SIGNEDNUM .
+
+    *               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    /               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    =               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    !               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    <               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    >               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    +               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    -               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    BEGINDECLARES   reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ENDDECLARES     reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    READ            reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    IF              reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    REPEAT          reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    UNTIL           reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ENDFOR          reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ENDWHILE        reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ELSE            reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ENDIF           reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    INT             reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ARRAYINT        reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    PRINT           reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ATR             reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    PRINTS          reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    FOR             reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    WHILE           reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    $end            reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    )               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ;               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    ]               reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    AND             reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+    OR              reduce using rule 50 (FACTOR -> SIGNEDNUM .)
+
+
+state 37
+
+    (51) FACTOR -> VAR .
+    (52) FACTOR -> VAR . [ EXP ]
+    (53) FACTOR -> VAR . [ EXP ] [ EXP ]
+
+    *               reduce using rule 51 (FACTOR -> VAR .)
+    /               reduce using rule 51 (FACTOR -> VAR .)
+    =               reduce using rule 51 (FACTOR -> VAR .)
+    !               reduce using rule 51 (FACTOR -> VAR .)
+    <               reduce using rule 51 (FACTOR -> VAR .)
+    >               reduce using rule 51 (FACTOR -> VAR .)
+    +               reduce using rule 51 (FACTOR -> VAR .)
+    -               reduce using rule 51 (FACTOR -> VAR .)
+    BEGINDECLARES   reduce using rule 51 (FACTOR -> VAR .)
+    ENDDECLARES     reduce using rule 51 (FACTOR -> VAR .)
+    READ            reduce using rule 51 (FACTOR -> VAR .)
+    IF              reduce using rule 51 (FACTOR -> VAR .)
+    REPEAT          reduce using rule 51 (FACTOR -> VAR .)
+    UNTIL           reduce using rule 51 (FACTOR -> VAR .)
+    ENDFOR          reduce using rule 51 (FACTOR -> VAR .)
+    ENDWHILE        reduce using rule 51 (FACTOR -> VAR .)
+    ELSE            reduce using rule 51 (FACTOR -> VAR .)
+    ENDIF           reduce using rule 51 (FACTOR -> VAR .)
+    INT             reduce using rule 51 (FACTOR -> VAR .)
+    ARRAYINT        reduce using rule 51 (FACTOR -> VAR .)
+    PRINT           reduce using rule 51 (FACTOR -> VAR .)
+    ATR             reduce using rule 51 (FACTOR -> VAR .)
+    PRINTS          reduce using rule 51 (FACTOR -> VAR .)
+    FOR             reduce using rule 51 (FACTOR -> VAR .)
+    WHILE           reduce using rule 51 (FACTOR -> VAR .)
+    $end            reduce using rule 51 (FACTOR -> VAR .)
+    )               reduce using rule 51 (FACTOR -> VAR .)
+    ;               reduce using rule 51 (FACTOR -> VAR .)
+    ]               reduce using rule 51 (FACTOR -> VAR .)
+    AND             reduce using rule 51 (FACTOR -> VAR .)
+    OR              reduce using rule 51 (FACTOR -> VAR .)
+    [               shift and go to state 65
+
+
+state 38
+
+    (21) Operacao -> WHILEI ( . CONDICOES ) DO
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 66
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 39
+
+    (31) Operacao -> ELSE Operacoes .
+    (2) Operacoes -> Operacoes . Operacao
+    (4) Operacao -> . BEGINDECLARES
+    (5) Operacao -> . ENDDECLARES
+    (6) Operacao -> . READ VAR
+    (7) Operacao -> . READ VAR [ EXP ]
+    (8) Operacao -> . READ VAR [ EXP ] [ EXP ]
+    (9) Operacao -> . IF ( CONDICOES )
+    (15) Operacao -> . REPEAT
+    (16) Operacao -> . UNTIL ( CONDICOES )
+    (17) Operacao -> . FOR1 FOR3
+    (20) Operacao -> . ENDFOR
+    (21) Operacao -> . WHILEI ( CONDICOES ) DO
+    (24) Operacao -> . ENDWHILE
+    (31) Operacao -> . ELSE Operacoes
+    (32) Operacao -> . ENDIF
+    (33) Operacao -> . INT VAR
+    (34) Operacao -> . INT VAR = EXP
+    (35) Operacao -> . ARRAYINT VAR [ NUM ]
+    (36) Operacao -> . ARRAYINT VAR [ NUM ] [ NUM ]
+    (37) Operacao -> . PRINT EXP
+    (38) Operacao -> . ATR VAR = EXP
+    (39) Operacao -> . ATR VAR [ EXP ] = EXP
+    (40) Operacao -> . ATR VAR [ EXP ] [ EXP ] = EXP
+    (41) Operacao -> . PRINTS STRING
+    (23) FOR1 -> . FOR ( Operacao ;
+    (22) WHILEI -> . WHILE
+
+  ! shift/reduce conflict for BEGINDECLARES resolved as shift
+  ! shift/reduce conflict for ENDDECLARES resolved as shift
+  ! shift/reduce conflict for READ resolved as shift
+  ! shift/reduce conflict for IF resolved as shift
+  ! shift/reduce conflict for REPEAT resolved as shift
+  ! shift/reduce conflict for UNTIL resolved as shift
+  ! shift/reduce conflict for ENDFOR resolved as shift
+  ! shift/reduce conflict for ENDWHILE resolved as shift
+  ! shift/reduce conflict for ELSE resolved as shift
+  ! shift/reduce conflict for ENDIF resolved as shift
+  ! shift/reduce conflict for INT resolved as shift
+  ! shift/reduce conflict for ARRAYINT resolved as shift
+  ! shift/reduce conflict for PRINT resolved as shift
+  ! shift/reduce conflict for ATR resolved as shift
+  ! shift/reduce conflict for PRINTS resolved as shift
+  ! shift/reduce conflict for FOR resolved as shift
+  ! shift/reduce conflict for WHILE resolved as shift
+    $end            reduce using rule 31 (Operacao -> ELSE Operacoes .)
+    )               reduce using rule 31 (Operacao -> ELSE Operacoes .)
+    ;               reduce using rule 31 (Operacao -> ELSE Operacoes .)
+    BEGINDECLARES   shift and go to state 4
+    ENDDECLARES     shift and go to state 5
+    READ            shift and go to state 6
+    IF              shift and go to state 7
+    REPEAT          shift and go to state 8
+    UNTIL           shift and go to state 9
+    ENDFOR          shift and go to state 11
+    ENDWHILE        shift and go to state 13
+    ELSE            shift and go to state 14
+    ENDIF           shift and go to state 15
+    INT             shift and go to state 16
+    ARRAYINT        shift and go to state 17
+    PRINT           shift and go to state 18
+    ATR             shift and go to state 19
+    PRINTS          shift and go to state 20
+    FOR             shift and go to state 21
+    WHILE           shift and go to state 22
+
+  ! BEGINDECLARES   [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ENDDECLARES     [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! READ            [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! IF              [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! REPEAT          [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! UNTIL           [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ENDFOR          [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ENDWHILE        [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ELSE            [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ENDIF           [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! INT             [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ARRAYINT        [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! PRINT           [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! ATR             [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! PRINTS          [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! FOR             [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+  ! WHILE           [ reduce using rule 31 (Operacao -> ELSE Operacoes .) ]
+
+    Operacao                       shift and go to state 3
+    FOR1                           shift and go to state 10
+    WHILEI                         shift and go to state 12
+
+state 40
+
+    (33) Operacao -> INT VAR .
+    (34) Operacao -> INT VAR . = EXP
+
+    BEGINDECLARES   reduce using rule 33 (Operacao -> INT VAR .)
+    ENDDECLARES     reduce using rule 33 (Operacao -> INT VAR .)
+    READ            reduce using rule 33 (Operacao -> INT VAR .)
+    IF              reduce using rule 33 (Operacao -> INT VAR .)
+    REPEAT          reduce using rule 33 (Operacao -> INT VAR .)
+    UNTIL           reduce using rule 33 (Operacao -> INT VAR .)
+    ENDFOR          reduce using rule 33 (Operacao -> INT VAR .)
+    ENDWHILE        reduce using rule 33 (Operacao -> INT VAR .)
+    ELSE            reduce using rule 33 (Operacao -> INT VAR .)
+    ENDIF           reduce using rule 33 (Operacao -> INT VAR .)
+    INT             reduce using rule 33 (Operacao -> INT VAR .)
+    ARRAYINT        reduce using rule 33 (Operacao -> INT VAR .)
+    PRINT           reduce using rule 33 (Operacao -> INT VAR .)
+    ATR             reduce using rule 33 (Operacao -> INT VAR .)
+    PRINTS          reduce using rule 33 (Operacao -> INT VAR .)
+    FOR             reduce using rule 33 (Operacao -> INT VAR .)
+    WHILE           reduce using rule 33 (Operacao -> INT VAR .)
+    $end            reduce using rule 33 (Operacao -> INT VAR .)
+    )               reduce using rule 33 (Operacao -> INT VAR .)
+    ;               reduce using rule 33 (Operacao -> INT VAR .)
+    =               shift and go to state 67
+
+
+state 41
+
+    (35) Operacao -> ARRAYINT VAR . [ NUM ]
+    (36) Operacao -> ARRAYINT VAR . [ NUM ] [ NUM ]
+
+    [               shift and go to state 68
+
+
+state 42
+
+    (37) Operacao -> PRINT EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    BEGINDECLARES   reduce using rule 37 (Operacao -> PRINT EXP .)
+    ENDDECLARES     reduce using rule 37 (Operacao -> PRINT EXP .)
+    READ            reduce using rule 37 (Operacao -> PRINT EXP .)
+    IF              reduce using rule 37 (Operacao -> PRINT EXP .)
+    REPEAT          reduce using rule 37 (Operacao -> PRINT EXP .)
+    UNTIL           reduce using rule 37 (Operacao -> PRINT EXP .)
+    ENDFOR          reduce using rule 37 (Operacao -> PRINT EXP .)
+    ENDWHILE        reduce using rule 37 (Operacao -> PRINT EXP .)
+    ELSE            reduce using rule 37 (Operacao -> PRINT EXP .)
+    ENDIF           reduce using rule 37 (Operacao -> PRINT EXP .)
+    INT             reduce using rule 37 (Operacao -> PRINT EXP .)
+    ARRAYINT        reduce using rule 37 (Operacao -> PRINT EXP .)
+    PRINT           reduce using rule 37 (Operacao -> PRINT EXP .)
+    ATR             reduce using rule 37 (Operacao -> PRINT EXP .)
+    PRINTS          reduce using rule 37 (Operacao -> PRINT EXP .)
+    FOR             reduce using rule 37 (Operacao -> PRINT EXP .)
+    WHILE           reduce using rule 37 (Operacao -> PRINT EXP .)
+    $end            reduce using rule 37 (Operacao -> PRINT EXP .)
+    )               reduce using rule 37 (Operacao -> PRINT EXP .)
+    ;               reduce using rule 37 (Operacao -> PRINT EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 43
+
+    (48) FACTOR -> ( . EXP )
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 69
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 44
+
+    (38) Operacao -> ATR VAR . = EXP
+    (39) Operacao -> ATR VAR . [ EXP ] = EXP
+    (40) Operacao -> ATR VAR . [ EXP ] [ EXP ] = EXP
+
+    =               shift and go to state 70
+    [               shift and go to state 71
+
+
+state 45
+
+    (41) Operacao -> PRINTS STRING .
+
+    BEGINDECLARES   reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ENDDECLARES     reduce using rule 41 (Operacao -> PRINTS STRING .)
+    READ            reduce using rule 41 (Operacao -> PRINTS STRING .)
+    IF              reduce using rule 41 (Operacao -> PRINTS STRING .)
+    REPEAT          reduce using rule 41 (Operacao -> PRINTS STRING .)
+    UNTIL           reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ENDFOR          reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ENDWHILE        reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ELSE            reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ENDIF           reduce using rule 41 (Operacao -> PRINTS STRING .)
+    INT             reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ARRAYINT        reduce using rule 41 (Operacao -> PRINTS STRING .)
+    PRINT           reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ATR             reduce using rule 41 (Operacao -> PRINTS STRING .)
+    PRINTS          reduce using rule 41 (Operacao -> PRINTS STRING .)
+    FOR             reduce using rule 41 (Operacao -> PRINTS STRING .)
+    WHILE           reduce using rule 41 (Operacao -> PRINTS STRING .)
+    $end            reduce using rule 41 (Operacao -> PRINTS STRING .)
+    )               reduce using rule 41 (Operacao -> PRINTS STRING .)
+    ;               reduce using rule 41 (Operacao -> PRINTS STRING .)
+
+
+state 46
+
+    (23) FOR1 -> FOR ( . Operacao ;
+    (4) Operacao -> . BEGINDECLARES
+    (5) Operacao -> . ENDDECLARES
+    (6) Operacao -> . READ VAR
+    (7) Operacao -> . READ VAR [ EXP ]
+    (8) Operacao -> . READ VAR [ EXP ] [ EXP ]
+    (9) Operacao -> . IF ( CONDICOES )
+    (15) Operacao -> . REPEAT
+    (16) Operacao -> . UNTIL ( CONDICOES )
+    (17) Operacao -> . FOR1 FOR3
+    (20) Operacao -> . ENDFOR
+    (21) Operacao -> . WHILEI ( CONDICOES ) DO
+    (24) Operacao -> . ENDWHILE
+    (31) Operacao -> . ELSE Operacoes
+    (32) Operacao -> . ENDIF
+    (33) Operacao -> . INT VAR
+    (34) Operacao -> . INT VAR = EXP
+    (35) Operacao -> . ARRAYINT VAR [ NUM ]
+    (36) Operacao -> . ARRAYINT VAR [ NUM ] [ NUM ]
+    (37) Operacao -> . PRINT EXP
+    (38) Operacao -> . ATR VAR = EXP
+    (39) Operacao -> . ATR VAR [ EXP ] = EXP
+    (40) Operacao -> . ATR VAR [ EXP ] [ EXP ] = EXP
+    (41) Operacao -> . PRINTS STRING
+    (23) FOR1 -> . FOR ( Operacao ;
+    (22) WHILEI -> . WHILE
+
+    BEGINDECLARES   shift and go to state 4
+    ENDDECLARES     shift and go to state 5
+    READ            shift and go to state 6
+    IF              shift and go to state 7
+    REPEAT          shift and go to state 8
+    UNTIL           shift and go to state 9
+    ENDFOR          shift and go to state 11
+    ENDWHILE        shift and go to state 13
+    ELSE            shift and go to state 14
+    ENDIF           shift and go to state 15
+    INT             shift and go to state 16
+    ARRAYINT        shift and go to state 17
+    PRINT           shift and go to state 18
+    ATR             shift and go to state 19
+    PRINTS          shift and go to state 20
+    FOR             shift and go to state 21
+    WHILE           shift and go to state 22
+
+    Operacao                       shift and go to state 72
+    FOR1                           shift and go to state 10
+    WHILEI                         shift and go to state 12
+
+state 47
+
+    (7) Operacao -> READ VAR [ . EXP ]
+    (8) Operacao -> READ VAR [ . EXP ] [ EXP ]
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 73
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 48
+
+    (9) Operacao -> IF ( CONDICOES . )
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+    )               shift and go to state 74
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+
+state 49
+
+    (16) Operacao -> UNTIL ( CONDICOES . )
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+    )               shift and go to state 75
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+
+state 50
+
+    (18) FOR3 -> FOR2 Operacao . ) DO
+
+    )               shift and go to state 76
+
+
+state 51
+
+    (19) FOR2 -> CONDICOES ; .
+
+    BEGINDECLARES   reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ENDDECLARES     reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    READ            reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    IF              reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    REPEAT          reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    UNTIL           reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ENDFOR          reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ENDWHILE        reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ELSE            reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ENDIF           reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    INT             reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ARRAYINT        reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    PRINT           reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    ATR             reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    PRINTS          reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    FOR             reduce using rule 19 (FOR2 -> CONDICOES ; .)
+    WHILE           reduce using rule 19 (FOR2 -> CONDICOES ; .)
+
+
+state 52
+
+    (13) CONDICOES -> CONDICOES AND . CONDICOES
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 77
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 53
+
+    (14) CONDICOES -> CONDICOES OR . CONDICOES
+    (10) CONDICOES -> . CONDICAO
+    (11) CONDICOES -> . NOT CONDICOES
+    (12) CONDICOES -> . ( CONDICOES )
+    (13) CONDICOES -> . CONDICOES AND CONDICOES
+    (14) CONDICOES -> . CONDICOES OR CONDICOES
+    (25) CONDICAO -> . EXP = = EXP
+    (26) CONDICAO -> . EXP ! = EXP
+    (27) CONDICAO -> . EXP < EXP
+    (28) CONDICAO -> . EXP > EXP
+    (29) CONDICAO -> . EXP < = EXP
+    (30) CONDICAO -> . EXP > = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    NOT             shift and go to state 30
+    (               shift and go to state 31
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    CONDICOES                      shift and go to state 78
+    CONDICAO                       shift and go to state 29
+    EXP                            shift and go to state 32
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 54
+
+    (11) CONDICOES -> NOT CONDICOES .
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+    ;               reduce using rule 11 (CONDICOES -> NOT CONDICOES .)
+    )               reduce using rule 11 (CONDICOES -> NOT CONDICOES .)
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+  ! AND             [ reduce using rule 11 (CONDICOES -> NOT CONDICOES .) ]
+  ! OR              [ reduce using rule 11 (CONDICOES -> NOT CONDICOES .) ]
+
+
+state 55
+
+    (12) CONDICOES -> ( CONDICOES . )
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+    )               shift and go to state 79
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+
+state 56
+
+    (48) FACTOR -> ( EXP . )
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+    (25) CONDICAO -> EXP . = = EXP
+    (26) CONDICAO -> EXP . ! = EXP
+    (27) CONDICAO -> EXP . < EXP
+    (28) CONDICAO -> EXP . > EXP
+    (29) CONDICAO -> EXP . < = EXP
+    (30) CONDICAO -> EXP . > = EXP
+
+    )               shift and go to state 80
+    +               shift and go to state 61
+    -               shift and go to state 62
+    =               shift and go to state 57
+    !               shift and go to state 58
+    <               shift and go to state 59
+    >               shift and go to state 60
+
+
+state 57
+
+    (25) CONDICAO -> EXP = . = EXP
+
+    =               shift and go to state 81
+
+
+state 58
+
+    (26) CONDICAO -> EXP ! . = EXP
+
+    =               shift and go to state 82
+
+
+state 59
+
+    (27) CONDICAO -> EXP < . EXP
+    (29) CONDICAO -> EXP < . = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    =               shift and go to state 84
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 83
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 60
+
+    (28) CONDICAO -> EXP > . EXP
+    (30) CONDICAO -> EXP > . = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    =               shift and go to state 86
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 85
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 61
+
+    (42) EXP -> EXP + . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    TERMO                          shift and go to state 87
+    FACTOR                         shift and go to state 34
+
+state 62
+
+    (43) EXP -> EXP - . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    TERMO                          shift and go to state 88
+    FACTOR                         shift and go to state 34
+
+state 63
+
+    (45) TERMO -> TERMO * . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    FACTOR                         shift and go to state 89
+
+state 64
+
+    (46) TERMO -> TERMO / . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    FACTOR                         shift and go to state 90
+
+state 65
+
+    (52) FACTOR -> VAR [ . EXP ]
+    (53) FACTOR -> VAR [ . EXP ] [ EXP ]
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 91
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 66
+
+    (21) Operacao -> WHILEI ( CONDICOES . ) DO
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+    )               shift and go to state 92
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+
+state 67
+
+    (34) Operacao -> INT VAR = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 93
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 68
+
+    (35) Operacao -> ARRAYINT VAR [ . NUM ]
+    (36) Operacao -> ARRAYINT VAR [ . NUM ] [ NUM ]
+
+    NUM             shift and go to state 94
+
+
+state 69
+
+    (48) FACTOR -> ( EXP . )
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    )               shift and go to state 80
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 70
+
+    (38) Operacao -> ATR VAR = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 95
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 71
+
+    (39) Operacao -> ATR VAR [ . EXP ] = EXP
+    (40) Operacao -> ATR VAR [ . EXP ] [ EXP ] = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 96
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 72
+
+    (23) FOR1 -> FOR ( Operacao . ;
+
+    ;               shift and go to state 97
+
+
+state 73
+
+    (7) Operacao -> READ VAR [ EXP . ]
+    (8) Operacao -> READ VAR [ EXP . ] [ EXP ]
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 98
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 74
+
+    (9) Operacao -> IF ( CONDICOES ) .
+
+    BEGINDECLARES   reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ENDDECLARES     reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    READ            reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    IF              reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    REPEAT          reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    UNTIL           reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ENDFOR          reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ENDWHILE        reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ELSE            reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ENDIF           reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    INT             reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ARRAYINT        reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    PRINT           reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ATR             reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    PRINTS          reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    FOR             reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    WHILE           reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    $end            reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    )               reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+    ;               reduce using rule 9 (Operacao -> IF ( CONDICOES ) .)
+
+
+state 75
+
+    (16) Operacao -> UNTIL ( CONDICOES ) .
+
+    BEGINDECLARES   reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ENDDECLARES     reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    READ            reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    IF              reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    REPEAT          reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    UNTIL           reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ENDFOR          reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ENDWHILE        reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ELSE            reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ENDIF           reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    INT             reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ARRAYINT        reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    PRINT           reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ATR             reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    PRINTS          reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    FOR             reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    WHILE           reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    $end            reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    )               reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+    ;               reduce using rule 16 (Operacao -> UNTIL ( CONDICOES ) .)
+
+
+state 76
+
+    (18) FOR3 -> FOR2 Operacao ) . DO
+
+    DO              shift and go to state 99
+
+
+state 77
+
+    (13) CONDICOES -> CONDICOES AND CONDICOES .
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+    ;               reduce using rule 13 (CONDICOES -> CONDICOES AND CONDICOES .)
+    )               reduce using rule 13 (CONDICOES -> CONDICOES AND CONDICOES .)
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+  ! AND             [ reduce using rule 13 (CONDICOES -> CONDICOES AND CONDICOES .) ]
+  ! OR              [ reduce using rule 13 (CONDICOES -> CONDICOES AND CONDICOES .) ]
+
+
+state 78
+
+    (14) CONDICOES -> CONDICOES OR CONDICOES .
+    (13) CONDICOES -> CONDICOES . AND CONDICOES
+    (14) CONDICOES -> CONDICOES . OR CONDICOES
+
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+    ;               reduce using rule 14 (CONDICOES -> CONDICOES OR CONDICOES .)
+    )               reduce using rule 14 (CONDICOES -> CONDICOES OR CONDICOES .)
+    AND             shift and go to state 52
+    OR              shift and go to state 53
+
+  ! AND             [ reduce using rule 14 (CONDICOES -> CONDICOES OR CONDICOES .) ]
+  ! OR              [ reduce using rule 14 (CONDICOES -> CONDICOES OR CONDICOES .) ]
+
+
+state 79
+
+    (12) CONDICOES -> ( CONDICOES ) .
+
+    ;               reduce using rule 12 (CONDICOES -> ( CONDICOES ) .)
+    AND             reduce using rule 12 (CONDICOES -> ( CONDICOES ) .)
+    OR              reduce using rule 12 (CONDICOES -> ( CONDICOES ) .)
+    )               reduce using rule 12 (CONDICOES -> ( CONDICOES ) .)
+
+
+state 80
+
+    (48) FACTOR -> ( EXP ) .
+
+    *               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    /               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    =               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    !               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    <               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    >               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    +               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    -               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    BEGINDECLARES   reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ENDDECLARES     reduce using rule 48 (FACTOR -> ( EXP ) .)
+    READ            reduce using rule 48 (FACTOR -> ( EXP ) .)
+    IF              reduce using rule 48 (FACTOR -> ( EXP ) .)
+    REPEAT          reduce using rule 48 (FACTOR -> ( EXP ) .)
+    UNTIL           reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ENDFOR          reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ENDWHILE        reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ELSE            reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ENDIF           reduce using rule 48 (FACTOR -> ( EXP ) .)
+    INT             reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ARRAYINT        reduce using rule 48 (FACTOR -> ( EXP ) .)
+    PRINT           reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ATR             reduce using rule 48 (FACTOR -> ( EXP ) .)
+    PRINTS          reduce using rule 48 (FACTOR -> ( EXP ) .)
+    FOR             reduce using rule 48 (FACTOR -> ( EXP ) .)
+    WHILE           reduce using rule 48 (FACTOR -> ( EXP ) .)
+    $end            reduce using rule 48 (FACTOR -> ( EXP ) .)
+    )               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ;               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    ]               reduce using rule 48 (FACTOR -> ( EXP ) .)
+    AND             reduce using rule 48 (FACTOR -> ( EXP ) .)
+    OR              reduce using rule 48 (FACTOR -> ( EXP ) .)
+
+
+state 81
+
+    (25) CONDICAO -> EXP = = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 100
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 82
+
+    (26) CONDICAO -> EXP ! = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 101
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 83
+
+    (27) CONDICAO -> EXP < EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 27 (CONDICAO -> EXP < EXP .)
+    AND             reduce using rule 27 (CONDICAO -> EXP < EXP .)
+    OR              reduce using rule 27 (CONDICAO -> EXP < EXP .)
+    )               reduce using rule 27 (CONDICAO -> EXP < EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 84
+
+    (29) CONDICAO -> EXP < = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 102
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 85
+
+    (28) CONDICAO -> EXP > EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 28 (CONDICAO -> EXP > EXP .)
+    AND             reduce using rule 28 (CONDICAO -> EXP > EXP .)
+    OR              reduce using rule 28 (CONDICAO -> EXP > EXP .)
+    )               reduce using rule 28 (CONDICAO -> EXP > EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 86
+
+    (30) CONDICAO -> EXP > = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 103
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 87
+
+    (42) EXP -> EXP + TERMO .
+    (45) TERMO -> TERMO . * FACTOR
+    (46) TERMO -> TERMO . / FACTOR
+
+    =               reduce using rule 42 (EXP -> EXP + TERMO .)
+    !               reduce using rule 42 (EXP -> EXP + TERMO .)
+    <               reduce using rule 42 (EXP -> EXP + TERMO .)
+    >               reduce using rule 42 (EXP -> EXP + TERMO .)
+    +               reduce using rule 42 (EXP -> EXP + TERMO .)
+    -               reduce using rule 42 (EXP -> EXP + TERMO .)
+    BEGINDECLARES   reduce using rule 42 (EXP -> EXP + TERMO .)
+    ENDDECLARES     reduce using rule 42 (EXP -> EXP + TERMO .)
+    READ            reduce using rule 42 (EXP -> EXP + TERMO .)
+    IF              reduce using rule 42 (EXP -> EXP + TERMO .)
+    REPEAT          reduce using rule 42 (EXP -> EXP + TERMO .)
+    UNTIL           reduce using rule 42 (EXP -> EXP + TERMO .)
+    ENDFOR          reduce using rule 42 (EXP -> EXP + TERMO .)
+    ENDWHILE        reduce using rule 42 (EXP -> EXP + TERMO .)
+    ELSE            reduce using rule 42 (EXP -> EXP + TERMO .)
+    ENDIF           reduce using rule 42 (EXP -> EXP + TERMO .)
+    INT             reduce using rule 42 (EXP -> EXP + TERMO .)
+    ARRAYINT        reduce using rule 42 (EXP -> EXP + TERMO .)
+    PRINT           reduce using rule 42 (EXP -> EXP + TERMO .)
+    ATR             reduce using rule 42 (EXP -> EXP + TERMO .)
+    PRINTS          reduce using rule 42 (EXP -> EXP + TERMO .)
+    FOR             reduce using rule 42 (EXP -> EXP + TERMO .)
+    WHILE           reduce using rule 42 (EXP -> EXP + TERMO .)
+    $end            reduce using rule 42 (EXP -> EXP + TERMO .)
+    )               reduce using rule 42 (EXP -> EXP + TERMO .)
+    ;               reduce using rule 42 (EXP -> EXP + TERMO .)
+    ]               reduce using rule 42 (EXP -> EXP + TERMO .)
+    AND             reduce using rule 42 (EXP -> EXP + TERMO .)
+    OR              reduce using rule 42 (EXP -> EXP + TERMO .)
+    *               shift and go to state 63
+    /               shift and go to state 64
+
+
+state 88
+
+    (43) EXP -> EXP - TERMO .
+    (45) TERMO -> TERMO . * FACTOR
+    (46) TERMO -> TERMO . / FACTOR
+
+    =               reduce using rule 43 (EXP -> EXP - TERMO .)
+    !               reduce using rule 43 (EXP -> EXP - TERMO .)
+    <               reduce using rule 43 (EXP -> EXP - TERMO .)
+    >               reduce using rule 43 (EXP -> EXP - TERMO .)
+    +               reduce using rule 43 (EXP -> EXP - TERMO .)
+    -               reduce using rule 43 (EXP -> EXP - TERMO .)
+    BEGINDECLARES   reduce using rule 43 (EXP -> EXP - TERMO .)
+    ENDDECLARES     reduce using rule 43 (EXP -> EXP - TERMO .)
+    READ            reduce using rule 43 (EXP -> EXP - TERMO .)
+    IF              reduce using rule 43 (EXP -> EXP - TERMO .)
+    REPEAT          reduce using rule 43 (EXP -> EXP - TERMO .)
+    UNTIL           reduce using rule 43 (EXP -> EXP - TERMO .)
+    ENDFOR          reduce using rule 43 (EXP -> EXP - TERMO .)
+    ENDWHILE        reduce using rule 43 (EXP -> EXP - TERMO .)
+    ELSE            reduce using rule 43 (EXP -> EXP - TERMO .)
+    ENDIF           reduce using rule 43 (EXP -> EXP - TERMO .)
+    INT             reduce using rule 43 (EXP -> EXP - TERMO .)
+    ARRAYINT        reduce using rule 43 (EXP -> EXP - TERMO .)
+    PRINT           reduce using rule 43 (EXP -> EXP - TERMO .)
+    ATR             reduce using rule 43 (EXP -> EXP - TERMO .)
+    PRINTS          reduce using rule 43 (EXP -> EXP - TERMO .)
+    FOR             reduce using rule 43 (EXP -> EXP - TERMO .)
+    WHILE           reduce using rule 43 (EXP -> EXP - TERMO .)
+    $end            reduce using rule 43 (EXP -> EXP - TERMO .)
+    )               reduce using rule 43 (EXP -> EXP - TERMO .)
+    ;               reduce using rule 43 (EXP -> EXP - TERMO .)
+    ]               reduce using rule 43 (EXP -> EXP - TERMO .)
+    AND             reduce using rule 43 (EXP -> EXP - TERMO .)
+    OR              reduce using rule 43 (EXP -> EXP - TERMO .)
+    *               shift and go to state 63
+    /               shift and go to state 64
+
+
+state 89
+
+    (45) TERMO -> TERMO * FACTOR .
+
+    *               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    /               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    =               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    !               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    <               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    >               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    +               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    -               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    BEGINDECLARES   reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ENDDECLARES     reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    READ            reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    IF              reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    REPEAT          reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    UNTIL           reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ENDFOR          reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ENDWHILE        reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ELSE            reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ENDIF           reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    INT             reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ARRAYINT        reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    PRINT           reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ATR             reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    PRINTS          reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    FOR             reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    WHILE           reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    $end            reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    )               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ;               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    ]               reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    AND             reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+    OR              reduce using rule 45 (TERMO -> TERMO * FACTOR .)
+
+
+state 90
+
+    (46) TERMO -> TERMO / FACTOR .
+
+    *               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    /               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    =               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    !               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    <               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    >               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    +               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    -               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    BEGINDECLARES   reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ENDDECLARES     reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    READ            reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    IF              reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    REPEAT          reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    UNTIL           reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ENDFOR          reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ENDWHILE        reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ELSE            reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ENDIF           reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    INT             reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ARRAYINT        reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    PRINT           reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ATR             reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    PRINTS          reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    FOR             reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    WHILE           reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    $end            reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    )               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ;               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    ]               reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    AND             reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+    OR              reduce using rule 46 (TERMO -> TERMO / FACTOR .)
+
+
+state 91
+
+    (52) FACTOR -> VAR [ EXP . ]
+    (53) FACTOR -> VAR [ EXP . ] [ EXP ]
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 104
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 92
+
+    (21) Operacao -> WHILEI ( CONDICOES ) . DO
+
+    DO              shift and go to state 105
+
+
+state 93
+
+    (34) Operacao -> INT VAR = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    BEGINDECLARES   reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ENDDECLARES     reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    READ            reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    IF              reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    REPEAT          reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    UNTIL           reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ENDFOR          reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ENDWHILE        reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ELSE            reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ENDIF           reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    INT             reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ARRAYINT        reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    PRINT           reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ATR             reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    PRINTS          reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    FOR             reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    WHILE           reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    $end            reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    )               reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    ;               reduce using rule 34 (Operacao -> INT VAR = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 94
+
+    (35) Operacao -> ARRAYINT VAR [ NUM . ]
+    (36) Operacao -> ARRAYINT VAR [ NUM . ] [ NUM ]
+
+    ]               shift and go to state 106
+
+
+state 95
+
+    (38) Operacao -> ATR VAR = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    BEGINDECLARES   reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ENDDECLARES     reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    READ            reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    IF              reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    REPEAT          reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    UNTIL           reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ENDFOR          reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ENDWHILE        reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ELSE            reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ENDIF           reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    INT             reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ARRAYINT        reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    PRINT           reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ATR             reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    PRINTS          reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    FOR             reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    WHILE           reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    $end            reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    )               reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    ;               reduce using rule 38 (Operacao -> ATR VAR = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 96
+
+    (39) Operacao -> ATR VAR [ EXP . ] = EXP
+    (40) Operacao -> ATR VAR [ EXP . ] [ EXP ] = EXP
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 107
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 97
+
+    (23) FOR1 -> FOR ( Operacao ; .
+
+    NOT             reduce using rule 23 (FOR1 -> FOR ( Operacao ; .)
+    (               reduce using rule 23 (FOR1 -> FOR ( Operacao ; .)
+    NUM             reduce using rule 23 (FOR1 -> FOR ( Operacao ; .)
+    SIGNEDNUM       reduce using rule 23 (FOR1 -> FOR ( Operacao ; .)
+    VAR             reduce using rule 23 (FOR1 -> FOR ( Operacao ; .)
+
+
+state 98
+
+    (7) Operacao -> READ VAR [ EXP ] .
+    (8) Operacao -> READ VAR [ EXP ] . [ EXP ]
+
+    BEGINDECLARES   reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ENDDECLARES     reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    READ            reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    IF              reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    REPEAT          reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    UNTIL           reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ENDFOR          reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ENDWHILE        reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ELSE            reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ENDIF           reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    INT             reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ARRAYINT        reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    PRINT           reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ATR             reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    PRINTS          reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    FOR             reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    WHILE           reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    $end            reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    )               reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    ;               reduce using rule 7 (Operacao -> READ VAR [ EXP ] .)
+    [               shift and go to state 108
+
+
+state 99
+
+    (18) FOR3 -> FOR2 Operacao ) DO .
+
+    BEGINDECLARES   reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ENDDECLARES     reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    READ            reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    IF              reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    REPEAT          reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    UNTIL           reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ENDFOR          reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ENDWHILE        reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ELSE            reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ENDIF           reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    INT             reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ARRAYINT        reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    PRINT           reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ATR             reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    PRINTS          reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    FOR             reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    WHILE           reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    $end            reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    )               reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+    ;               reduce using rule 18 (FOR3 -> FOR2 Operacao ) DO .)
+
+
+state 100
+
+    (25) CONDICAO -> EXP = = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 25 (CONDICAO -> EXP = = EXP .)
+    AND             reduce using rule 25 (CONDICAO -> EXP = = EXP .)
+    OR              reduce using rule 25 (CONDICAO -> EXP = = EXP .)
+    )               reduce using rule 25 (CONDICAO -> EXP = = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 101
+
+    (26) CONDICAO -> EXP ! = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 26 (CONDICAO -> EXP ! = EXP .)
+    AND             reduce using rule 26 (CONDICAO -> EXP ! = EXP .)
+    OR              reduce using rule 26 (CONDICAO -> EXP ! = EXP .)
+    )               reduce using rule 26 (CONDICAO -> EXP ! = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 102
+
+    (29) CONDICAO -> EXP < = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 29 (CONDICAO -> EXP < = EXP .)
+    AND             reduce using rule 29 (CONDICAO -> EXP < = EXP .)
+    OR              reduce using rule 29 (CONDICAO -> EXP < = EXP .)
+    )               reduce using rule 29 (CONDICAO -> EXP < = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 103
+
+    (30) CONDICAO -> EXP > = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ;               reduce using rule 30 (CONDICAO -> EXP > = EXP .)
+    AND             reduce using rule 30 (CONDICAO -> EXP > = EXP .)
+    OR              reduce using rule 30 (CONDICAO -> EXP > = EXP .)
+    )               reduce using rule 30 (CONDICAO -> EXP > = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 104
+
+    (52) FACTOR -> VAR [ EXP ] .
+    (53) FACTOR -> VAR [ EXP ] . [ EXP ]
+
+    *               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    /               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    =               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    !               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    <               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    >               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    +               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    -               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    BEGINDECLARES   reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ENDDECLARES     reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    READ            reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    IF              reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    REPEAT          reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    UNTIL           reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ENDFOR          reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ENDWHILE        reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ELSE            reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ENDIF           reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    INT             reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ARRAYINT        reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    PRINT           reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ATR             reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    PRINTS          reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    FOR             reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    WHILE           reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    $end            reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    )               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ;               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    ]               reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    AND             reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    OR              reduce using rule 52 (FACTOR -> VAR [ EXP ] .)
+    [               shift and go to state 109
+
+
+state 105
+
+    (21) Operacao -> WHILEI ( CONDICOES ) DO .
+
+    BEGINDECLARES   reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ENDDECLARES     reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    READ            reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    IF              reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    REPEAT          reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    UNTIL           reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ENDFOR          reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ENDWHILE        reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ELSE            reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ENDIF           reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    INT             reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ARRAYINT        reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    PRINT           reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ATR             reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    PRINTS          reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    FOR             reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    WHILE           reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    $end            reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    )               reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+    ;               reduce using rule 21 (Operacao -> WHILEI ( CONDICOES ) DO .)
+
+
+state 106
+
+    (35) Operacao -> ARRAYINT VAR [ NUM ] .
+    (36) Operacao -> ARRAYINT VAR [ NUM ] . [ NUM ]
+
+    BEGINDECLARES   reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ENDDECLARES     reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    READ            reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    IF              reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    REPEAT          reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    UNTIL           reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ENDFOR          reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ENDWHILE        reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ELSE            reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ENDIF           reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    INT             reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ARRAYINT        reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    PRINT           reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ATR             reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    PRINTS          reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    FOR             reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    WHILE           reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    $end            reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    )               reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    ;               reduce using rule 35 (Operacao -> ARRAYINT VAR [ NUM ] .)
+    [               shift and go to state 110
+
+
+state 107
+
+    (39) Operacao -> ATR VAR [ EXP ] . = EXP
+    (40) Operacao -> ATR VAR [ EXP ] . [ EXP ] = EXP
+
+    =               shift and go to state 112
+    [               shift and go to state 111
+
+
+state 108
+
+    (8) Operacao -> READ VAR [ EXP ] [ . EXP ]
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 113
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 109
+
+    (53) FACTOR -> VAR [ EXP ] [ . EXP ]
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 114
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 110
+
+    (36) Operacao -> ARRAYINT VAR [ NUM ] [ . NUM ]
+
+    NUM             shift and go to state 115
+
+
+state 111
+
+    (40) Operacao -> ATR VAR [ EXP ] [ . EXP ] = EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 116
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 112
+
+    (39) Operacao -> ATR VAR [ EXP ] = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 117
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 113
+
+    (8) Operacao -> READ VAR [ EXP ] [ EXP . ]
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 118
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 114
+
+    (53) FACTOR -> VAR [ EXP ] [ EXP . ]
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 119
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 115
+
+    (36) Operacao -> ARRAYINT VAR [ NUM ] [ NUM . ]
+
+    ]               shift and go to state 120
+
+
+state 116
+
+    (40) Operacao -> ATR VAR [ EXP ] [ EXP . ] = EXP
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    ]               shift and go to state 121
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 117
+
+    (39) Operacao -> ATR VAR [ EXP ] = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    BEGINDECLARES   reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ENDDECLARES     reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    READ            reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    IF              reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    REPEAT          reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    UNTIL           reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ENDFOR          reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ENDWHILE        reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ELSE            reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ENDIF           reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    INT             reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ARRAYINT        reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    PRINT           reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ATR             reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    PRINTS          reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    FOR             reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    WHILE           reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    $end            reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    )               reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    ;               reduce using rule 39 (Operacao -> ATR VAR [ EXP ] = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+
+state 118
+
+    (8) Operacao -> READ VAR [ EXP ] [ EXP ] .
+
+    BEGINDECLARES   reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ENDDECLARES     reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    READ            reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    IF              reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    REPEAT          reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    UNTIL           reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ENDFOR          reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ENDWHILE        reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ELSE            reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ENDIF           reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    INT             reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ARRAYINT        reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    PRINT           reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ATR             reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    PRINTS          reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    FOR             reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    WHILE           reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    $end            reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    )               reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+    ;               reduce using rule 8 (Operacao -> READ VAR [ EXP ] [ EXP ] .)
+
+
+state 119
+
+    (53) FACTOR -> VAR [ EXP ] [ EXP ] .
+
+    *               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    /               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    =               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    !               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    <               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    >               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    +               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    -               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    BEGINDECLARES   reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ENDDECLARES     reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    READ            reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    IF              reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    REPEAT          reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    UNTIL           reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ENDFOR          reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ENDWHILE        reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ELSE            reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ENDIF           reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    INT             reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ARRAYINT        reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    PRINT           reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ATR             reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    PRINTS          reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    FOR             reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    WHILE           reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    $end            reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    )               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ;               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    ]               reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    AND             reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+    OR              reduce using rule 53 (FACTOR -> VAR [ EXP ] [ EXP ] .)
+
+
+state 120
+
+    (36) Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .
+
+    BEGINDECLARES   reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ENDDECLARES     reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    READ            reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    IF              reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    REPEAT          reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    UNTIL           reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ENDFOR          reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ENDWHILE        reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ELSE            reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ENDIF           reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    INT             reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ARRAYINT        reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    PRINT           reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ATR             reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    PRINTS          reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    FOR             reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    WHILE           reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    $end            reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    )               reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+    ;               reduce using rule 36 (Operacao -> ARRAYINT VAR [ NUM ] [ NUM ] .)
+
+
+state 121
+
+    (40) Operacao -> ATR VAR [ EXP ] [ EXP ] . = EXP
+
+    =               shift and go to state 122
+
+
+state 122
+
+    (40) Operacao -> ATR VAR [ EXP ] [ EXP ] = . EXP
+    (42) EXP -> . EXP + TERMO
+    (43) EXP -> . EXP - TERMO
+    (44) EXP -> . TERMO
+    (45) TERMO -> . TERMO * FACTOR
+    (46) TERMO -> . TERMO / FACTOR
+    (47) TERMO -> . FACTOR
+    (48) FACTOR -> . ( EXP )
+    (49) FACTOR -> . NUM
+    (50) FACTOR -> . SIGNEDNUM
+    (51) FACTOR -> . VAR
+    (52) FACTOR -> . VAR [ EXP ]
+    (53) FACTOR -> . VAR [ EXP ] [ EXP ]
+
+    (               shift and go to state 43
+    NUM             shift and go to state 35
+    SIGNEDNUM       shift and go to state 36
+    VAR             shift and go to state 37
+
+    EXP                            shift and go to state 123
+    TERMO                          shift and go to state 33
+    FACTOR                         shift and go to state 34
+
+state 123
+
+    (40) Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .
+    (42) EXP -> EXP . + TERMO
+    (43) EXP -> EXP . - TERMO
+
+    BEGINDECLARES   reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ENDDECLARES     reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    READ            reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    IF              reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    REPEAT          reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    UNTIL           reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ENDFOR          reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ENDWHILE        reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ELSE            reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ENDIF           reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    INT             reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ARRAYINT        reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    PRINT           reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ATR             reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    PRINTS          reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    FOR             reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    WHILE           reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    $end            reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    )               reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    ;               reduce using rule 40 (Operacao -> ATR VAR [ EXP ] [ EXP ] = EXP .)
+    +               shift and go to state 61
+    -               shift and go to state 62
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for BEGINDECLARES in state 39 resolved as shift
+WARNING: shift/reduce conflict for ENDDECLARES in state 39 resolved as shift
+WARNING: shift/reduce conflict for READ in state 39 resolved as shift
+WARNING: shift/reduce conflict for IF in state 39 resolved as shift
+WARNING: shift/reduce conflict for REPEAT in state 39 resolved as shift
+WARNING: shift/reduce conflict for UNTIL in state 39 resolved as shift
+WARNING: shift/reduce conflict for ENDFOR in state 39 resolved as shift
+WARNING: shift/reduce conflict for ENDWHILE in state 39 resolved as shift
+WARNING: shift/reduce conflict for ELSE in state 39 resolved as shift
+WARNING: shift/reduce conflict for ENDIF in state 39 resolved as shift
+WARNING: shift/reduce conflict for INT in state 39 resolved as shift
+WARNING: shift/reduce conflict for ARRAYINT in state 39 resolved as shift
+WARNING: shift/reduce conflict for PRINT in state 39 resolved as shift
+WARNING: shift/reduce conflict for ATR in state 39 resolved as shift
+WARNING: shift/reduce conflict for PRINTS in state 39 resolved as shift
+WARNING: shift/reduce conflict for FOR in state 39 resolved as shift
+WARNING: shift/reduce conflict for WHILE in state 39 resolved as shift
+WARNING: shift/reduce conflict for AND in state 54 resolved as shift
+WARNING: shift/reduce conflict for OR in state 54 resolved as shift
+WARNING: shift/reduce conflict for AND in state 77 resolved as shift
+WARNING: shift/reduce conflict for OR in state 77 resolved as shift
+WARNING: shift/reduce conflict for AND in state 78 resolved as shift
+WARNING: shift/reduce conflict for OR in state 78 resolved as shift
