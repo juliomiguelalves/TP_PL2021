@@ -11,5 +11,5 @@ Trabalho realizado por:
 
 Notas Finais:
 
-# TP1 : 18
-# TP2 : 19
+ TP1 : 18
+ TP2 : 19
